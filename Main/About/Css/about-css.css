@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+.body{
+    overflow-x: hidden;
+    padding: 0;
+}
+.container{
+    width: 90vw;
+    height: 250vh;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr 8fr 3.5fr 3fr repeat(2, 3.5fr) 4fr;
+    grid-template-areas:
+            "header"
+            "about--title"
+            "about--img"
+            "about--story"
+            "about--number"
+            "about--dec"
+            "about--end"
+            "about--contact"
+            "fotter"
+;
+}
+.header{
+    grid-area: header;
+}
+.about--title{
+    grid-area: about--title;
+    text-align: left;
+}
+.about--title h1{
+    var(--large-fontsize)
+}
+.about--img{
+    grid-area: about--img;
+    background-image: url("../Img/simple2-about-group.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0;
+}
+.about--story{
+    grid-area: about--story;
+}
+.about--number{
+    grid-area: about--number;
+}
+.about--dec{
+    grid-area: about--dec;
+}
+.about--end{
+    grid-area: about--end;
+}
+.about--contact{
+    grid-area: about--contact;
+}
+.fotter{
+    grid-area: fotter;
+}
