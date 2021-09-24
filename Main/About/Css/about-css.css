@@ -14,7 +14,7 @@
 }
 :root{
     --yellow-primary-color: #fff226;
-    --grey-color: #afadad;
+    --grey-color: #CCCCCC;
     --yellow-secondary-color: #f2e400;
     --gray-small: #F0F0F0;
     --verylarge-fontsize: 3rem;
@@ -95,7 +95,7 @@
 }
 .about--number{
     grid-area: about--number;
-    padding-top: 4rem;
+    padding-top: 5rem;
     font-family: Lora,sans-serif;
 }
 .about--dec{
@@ -126,4 +126,53 @@
 }
 .fotter{
     grid-area: fotter;
+}
+@media only screen and (min-width: 800px){
+    .container{
+        width: 55vw;
+        height: 100vh;
+        display: grid;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 3fr 2fr 2fr 2fr 3fr;
+        grid-template-areas:
+            "header header"
+            "about--title about--title"
+            "about--img about--img"
+            "about--story about--number"
+            "about--dec about--dec"
+            "about--end about--end"
+            "fotter fotter"
+    ;
+    }
+    .about--title h1{
+        font-weight: 900;
+        font-size: var(--verylarge-fontsize);
+        font-family: "Encode Sans",sans-serif;
+        margin: 0;
+    }
+    .about--story h2{
+        font-size: var(--medium-fontsize);
+        font-family: "Encode Sans",sans-serif;
+        color: var(--grey-color);
+    }
+    .number-one{
+        display: flex;
+        flex-direction: row;
+    }
+    .number-two{
+        display: flex;
+        flex-direction: row;
+    }
+    .number-three{
+        display: flex;
+        flex-direction: row;
+    }
+    .about--dec p{
+        font-size: var(--medium-fontsize);
+    }
+    .about--end{
+        font-size: var(--medium-fontsize);
+        line-height: 55px;
+    }
 }
