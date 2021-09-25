@@ -8,8 +8,9 @@
 }
 :root{
     --yellow-primary-color: #fff226;
-    --grey-color: #afadad;
-    --yellow-secondary-color: #f2e400;
+    --yellow-secondary-color: #b8ad00;
+    --yellow-tertiary-color: #f2e400;
+    --grey-color: #cccccc;
     --verylarge-fontsize: 3rem;
     --large-fontsize: 2.3rem;
     --medium-fontsize: 2rem;
