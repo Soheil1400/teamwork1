@@ -1,0 +1,64 @@
+.main-offer {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 30vh 60vh 60vh 60vh;
+    background-color: aqua;
+    grid-gap: 10px 50px;
+    grid-template-areas: 'header '
+                         'content--design'
+                         'content--motion'
+                         'content--strategy';
+}
+
+.header {
+    grid-area: header;
+    background-color: sandybrown;
+}
+
+.content--design {
+    grid-area:content--design ;
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+}
+
+.image--design{
+    display: inline-block;
+}
+
+.properti--design{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.content--motion {
+    grid-area:content--motion ;
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+}
+
+.image--motion{
+    display: inline-block;
+}
+
+.properti--motion{
+    width: 50%;
+}
+
+.content--strategy {
+    grid-area:content--strategy ;
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+}
+
+.image--strategy{
+    display: inline-block;
+}
+
+.properti--strategy{
+    /*display: grid;*/
+    width: 50%;
+}
