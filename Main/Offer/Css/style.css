@@ -91,16 +91,16 @@ p{
 
 @media only screen and (min-width: 1450px){
     h2 {
-        font-size: 48px;
-        line-height: 50px;
+        font-size: 60px;
+        line-height: 62px;
     }
     h3 {
-        font-size: 34px;
-        line-height: 36px;
+        font-size: 38px;
+        line-height: 42px;
         color: var(--grey-color);
     }
     p{
-        font-size: 22px;
+        font-size: 26px;
     }
 
 
@@ -118,9 +118,9 @@ p{
         display: flex;
     }
     .properti--motion{
-        width: 55rem;
+        width: 60rem;
         box-sizing: border-box;
-        margin-left: 15%;
+        margin-left: 20%;
     }
 
 
@@ -129,9 +129,9 @@ p{
         display: flex;
     }
     .properti--strategy{
-        width: 55rem;
+        width: 60rem;
         box-sizing: border-box;
-        margin-left: 15%;
+        margin-left: 20%;
     }
 }
 
