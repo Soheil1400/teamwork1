@@ -1,0 +1,266 @@
+*{
+    margin: 0.7rem;
+    box-sizing: border-box;
+}
+.body{
+}
+@font-face {
+    font-family: "Lora";
+    src: url("../../../Element/Fonts/Lora/0QIhMX1D_JOuMw_LIftL.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Encode Sans";
+    src: url("../../../Element/Fonts/Encode Sans/c4mw1mF4GcnstG_Jh1QH6ac4hNLeNyeYUpKeDBNPVo0.woff2") format("woff2");
+}
+:root{
+    --yellow-primary-color: #fff226;
+    --grey-color: #CCCCCC;
+    --yellow-secondary-color: #f2e400;
+    --gray-small: #F0F0F0;
+    --verylarge-fontsize: 3rem;
+    --large-fontsize: 2.3rem;
+    --medium-fontsize: 2rem;
+    --small-fontsize: 1.5rem;
+    --verysmall-fontsize: 0.8rem;
+}
+.container{
+    width: 90vw;
+    height: 250vh;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 6fr 3.5fr 3fr 1fr 4fr;
+    grid-template-areas:
+            "header"
+            "about--title"
+            "about--img"
+            "about--story"
+            "about--number"
+            "about--dec"
+            "about--end"
+            "fotter"
+;
+}
+.header{
+    grid-area: header;
+}
+.about--title{
+    grid-area: about--title;
+    text-align: left;
+    padding: 100px 0 50px;
+}
+.about--title h1{
+    font-weight: 900;
+    font-size: var(--medium-fontsize);
+    font-family: "Encode Sans",sans-serif;
+    margin: 0;
+}
+.about--title h2{
+    font-weight: bold;
+    font-family: "Encode Sans",sans-serif;
+    color: var(--grey-color);
+    line-height: 40px;
+    margin: 5px;
+}
+.about--img{
+    grid-area: about--img;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.about--img img{
+    max-width: 100.1%;
+    height: auto;
+    margin: 0;
+}
+.about--story{
+    grid-area: about--story;
+    padding-top: 2rem;
+}
+.no_line{
+    margin: 0 auto 30px auto;
+    background: none;
+    color: transparent;
+    border: none;
+    width: 100%;
+    height: 1px;
+}
+.about--story h2{
+    font-size: var(--small-fontsize);
+    font-family: "Encode Sans",sans-serif;
+    color: var(--grey-color);
+}
+.about--story p{
+    font-family: Lora,sans-serif;
+}
+.about--number{
+    grid-area: about--number;
+    padding-top: 5rem;
+    font-family: Lora,sans-serif;
+}
+.about--number img{
+    width: 63px;
+    height: 63px;
+}
+.about--dec{
+    grid-area: about--dec;
+    padding-top: 4rem;
+}
+.about--dec p{
+    color: var(--grey-color);
+    font-size: var(--small-fontsize);
+    font-family: "Encode Sans",sans-serif;
+    padding-left: 2rem;
+    border-left: 0.5rem solid var(--gray-small);
+}
+.about--end{
+    grid-area: about--end;
+    font-family: "Encode Sans",sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 41px;
+    color: var(--yellow-secondary-color);
+    padding: 5rem 0 3rem;
+    letter-spacing: 0;
+}
+.about--end a{
+    outline: 0;
+    color: var(--yellow-secondary-color);
+    margin: 0;
+}
+.fotter{
+    grid-area: fotter;
+}
+@media only screen and (min-width: 1450px){
+    .container{
+        width: 55vw;
+        height: 200vh;
+        display: grid;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 3fr 2fr 2fr 2fr 3fr;
+        grid-template-areas:
+            "header header"
+            "about--title about--title"
+            "about--img about--img"
+            "about--story about--number"
+            "about--dec about--dec"
+            "about--end about--end"
+            "fotter fotter"
+    ;
+    }
+    .about--title h1{
+        font-weight: 900;
+        font-size: var(--verylarge-fontsize);
+        font-family: "Encode Sans",sans-serif;
+        margin: 0;
+    }
+    .about--story h2{
+        font-size: var(--medium-fontsize);
+        font-family: "Encode Sans",sans-serif;
+        color: var(--grey-color);
+    }
+    .number-one{
+        display: flex;
+        flex-direction: row;
+    }
+    .number-two{
+        display: flex;
+        flex-direction: row;
+    }
+    .number-three{
+        display: flex;
+        flex-direction: row;
+    }
+    .about--dec p{
+        font-size: var(--medium-fontsize);
+    }
+    .about--end{
+        font-size: var(--medium-fontsize);
+        line-height: 55px;
+    }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1449px){
+    .container{
+        width: 90vw;
+        height: 200vh;
+        display: grid;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 3fr 2fr 2fr 2fr 3fr;
+        grid-template-areas:
+            "header header"
+            "about--title about--title"
+            "about--img about--img"
+            "about--story about--number"
+            "about--dec about--dec"
+            "about--end about--end"
+            "fotter fotter"
+    ;
+    }
+    .about--title h1{
+        font-weight: 900;
+        font-size: var(--verylarge-fontsize);
+        font-family: "Encode Sans",sans-serif;
+        margin: 0;
+    }
+    .about--story h2{
+        font-size: var(--medium-fontsize);
+        font-family: "Encode Sans",sans-serif;
+        color: var(--grey-color);
+    }
+    .number-one{
+        display: flex;
+        flex-direction: row;
+    }
+    .number-two{
+        display: flex;
+        flex-direction: row;
+    }
+    .number-three{
+        display: flex;
+        flex-direction: row;
+    }
+    .about--dec p{
+        font-size: var(--medium-fontsize);
+    }
+    .about--end{
+        font-size: var(--medium-fontsize);
+        line-height: 55px;
+    }
+}
+@media only screen and (min-width: 750px) and (max-width: 999px){
+    .container{
+        width: 90vw;
+        height: 200vh;
+        display: grid;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 3fr 2fr 2fr 2fr 3fr;
+        grid-template-areas:
+            "header header"
+            "about--title about--title"
+            "about--img about--img"
+            "about--story about--number"
+            "about--dec about--dec"
+            "about--end about--end"
+            "fotter fotter"
+    ;
+    }
+    .number-one{
+        display: flex;
+        flex-direction: row;
+    }
+    .number-two{
+        display: flex;
+        flex-direction: row;
+    }
+    .number-three{
+        display: flex;
+        flex-direction: row;
+    }
+}
+.abcd{
+
+}
+
