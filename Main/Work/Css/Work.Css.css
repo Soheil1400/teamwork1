@@ -2,45 +2,27 @@
     width: 750px;
     display: grid;
     grid-gap: 10px;
-    grid-template: 100px 800px 400px 700px 700px 700px 700px 700px 400px 100px 100px 100px 200px 100px / 1fr;
+    grid-template: 100px 300px 700px 700px 700px 700px 700px 700px 200px 100px / 1fr;
     grid-template-areas:
-    "Header" "Home-Title" "Picture-1" "Picture-2" "Picture-3" "Picture-4"
-    "Picture-5" "Picture-6" "Offer" "Design" "Motion" "Strategy" "Contact-Us" "Home-Footer";
+    "Header" "Work-Title" "Picture-1" "Picture-2" "Picture-3" "Picture-4"
+    "Picture-5" "Picture-6" "Contact-Us" "Home-Footer";
 }
 h1{
     font-size: var(--verylarge-fontsize);
     font-family: "Lora", sans-serif;
-}
-h2{
-    font-family: "Lora", sans-serif;
-    font-size: var(--large-fontsize);
-    font-weight: 800;
 }
 h3{
     font-family: "Lora", sans-serif;
     font-size: var(--small-fontsize);
     color: var(--grey-color);
 }
-h5{
-    font-family: "Lora", sans-serif;
-    font-size: var(--verysmall-fontsize);
-    font-weight: lighter;
-    margin: 40px 0;
-}
-.Home-Title{
+.Work-Title{
     grid-area: Home-Title;
-    background-color: var(--yellow-primary-color);
 }
-.Home-Title-Container{
+.Work-Title-Container{
     text-align: left;
-    padding: 120px 100px 200px 100px;
+    padding: 20px 100px;
     box-sizing: border-box;
-}
-.Btn-Class{
-    border: none;
-    background-color: white;
-    width:200px;
-    height: 60px;
 }
 img{
     opacity: 1;
@@ -78,7 +60,7 @@ img{
 .Picture-1-Container{
     position: relative;
     grid-area: Picture-1;
-    margin: -300px 95px 0 95px;
+    margin: -0px 95px 0 95px;
 }
 .Picture-Bg:hover{
     opacity: 0.7;
@@ -125,37 +107,9 @@ img{
 .Picture-6-Container:hover{
     background-image: url("../Img/simple2-home-portfolio-project-6b.png");
 }
-.Offer{
-    grid-area: Offer;
-    margin: 50px 130px;
-}
-.Offer-Link{
-    text-underline: black;
-    color: inherit;
-}
-.Text-Underline{
-    color: var(--grey-color);
-    text-underline: var(--grey-color);
-    border-bottom: var(--grey-color) 5px solid;
-    padding-bottom: 10px;
-    display: inline;
-
-}
-.Design{
-    grid-area: Design;
-    margin: 0 130px;
-}
-.Motion{
-    grid-area: Motion;
-    margin: 0 130px;
-}
-.Strategy{
-    grid-area: Strategy;
-    margin: 0 130px;
-}
 .Contact-Us{
     grid-area: Contact-Us;
-    margin: 20px 130px;
+    margin: 50px 130px;
     color: var(--yellow-tertiary-color);
 
 }
@@ -166,3 +120,34 @@ img{
 .Home-Footer{
     grid-area: Home-Footer;
 }
+/*@media screen and (min-width: 750px){*/
+/*    .Home-Container{*/
+/*        width: 750px;*/
+/*        display: grid;*/
+/*        grid-gap: 10px;*/
+/*        grid-template: 100px 300px 700px 700px 200px 100px / repeat(3,33fr);*/
+/*        grid-template-areas:*/
+/*    "Header" "Work-Title" "Picture-1 Picture-2 Picture-3"*/
+/*    "Picture-4 Picture-5 Picture-6" "Contact-Us" "Home-Footer";*/
+/*    }*/
+/*    h1{*/
+/*        font-size: var(--verylarge-fontsize);*/
+/*        font-family: "Lora", sans-serif;*/
+/*    }*/
+/*    h3{*/
+/*        font-family: "Lora", sans-serif;*/
+/*        font-size: var(--small-fontsize);*/
+/*        color: var(--grey-color);*/
+/*    }*/
+/*    .Work-Title-Container {*/
+/*        text-align: left;*/
+/*        padding: 20px 100px;*/
+/*        box-sizing: border-box;*/
+/*    }*/
+/*    .Contact-Us {*/
+/*        grid-area: Contact-Us;*/
+/*        margin: 50px 130px;*/
+/*        color: var(--yellow-tertiary-color);*/
+/*    }*/
+
+/*}*/
