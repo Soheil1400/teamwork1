@@ -160,7 +160,6 @@ img{
         margin: 0 0 0 95px;
     }
     h1{
-        width: 600px;
         font-size: 41px;
         line-height: 50px;
         font-weight: 900;
@@ -169,9 +168,6 @@ img{
         font-size: 27px;
         line-height: 28px;
         font-weight: 800;
-    }
-    .Contact-Us h1 {
-        width: 600px;
     }
 }
 @media screen and (min-width: 1100px){
@@ -216,8 +212,6 @@ img{
     h3{
         font-size: 29px;
     }
-    .Contact-Us h1 {
-        width: 800px;
-    }
+
 }
 
