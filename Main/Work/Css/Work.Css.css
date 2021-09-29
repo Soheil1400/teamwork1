@@ -1,8 +1,8 @@
-.Home-Container{
-    width: 750px;
+.Work-Container{
+    width: 1100px;
     display: grid;
     grid-gap: 10px;
-    grid-template: 100px 300px 700px 700px 700px 700px 700px 700px 200px 100px / 1fr;
+    grid-template:  0.01fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 1fr 0.2fr 0.2fr/ 1fr;
     grid-template-areas:
     "Header" "Work-Title" "Picture-1" "Picture-2" "Picture-3" "Picture-4"
     "Picture-5" "Picture-6" "Contact-Us" "Home-Footer";
@@ -16,8 +16,11 @@ h3{
     font-size: var(--small-fontsize);
     color: var(--grey-color);
 }
+.Header-Work{
+    grid-area: Header;
+}
 .Work-Title{
-    grid-area: Home-Title;
+    grid-area: Work-Title;
 }
 .Work-Title-Container{
     text-align: left;
@@ -31,6 +34,7 @@ img{
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
+    box-sizing: border-box;
 }
 .Picture-Bg{
     position: absolute;
@@ -60,7 +64,7 @@ img{
 .Picture-1-Container{
     position: relative;
     grid-area: Picture-1;
-    margin: -0px 95px 0 95px;
+    margin: 0px 95px 0 95px;
 }
 .Picture-Bg:hover{
     opacity: 0.7;
@@ -120,34 +124,100 @@ img{
 .Home-Footer{
     grid-area: Home-Footer;
 }
-/*@media screen and (min-width: 750px){*/
-/*    .Home-Container{*/
-/*        width: 750px;*/
-/*        display: grid;*/
-/*        grid-gap: 10px;*/
-/*        grid-template: 100px 300px 700px 700px 200px 100px / repeat(3,33fr);*/
-/*        grid-template-areas:*/
-/*    "Header" "Work-Title" "Picture-1 Picture-2 Picture-3"*/
-/*    "Picture-4 Picture-5 Picture-6" "Contact-Us" "Home-Footer";*/
-/*    }*/
-/*    h1{*/
-/*        font-size: var(--verylarge-fontsize);*/
-/*        font-family: "Lora", sans-serif;*/
-/*    }*/
-/*    h3{*/
-/*        font-family: "Lora", sans-serif;*/
-/*        font-size: var(--small-fontsize);*/
-/*        color: var(--grey-color);*/
-/*    }*/
-/*    .Work-Title-Container {*/
-/*        text-align: left;*/
-/*        padding: 20px 100px;*/
-/*        box-sizing: border-box;*/
-/*    }*/
-/*    .Contact-Us {*/
-/*        grid-area: Contact-Us;*/
-/*        margin: 50px 130px;*/
-/*        color: var(--yellow-tertiary-color);*/
-/*    }*/
+@media screen and (min-width: 750px){
+    .Work-Container{
+        width: 1100px;
+        display: grid;
+        grid-template:  0.01fr 0.2fr 0.5fr 0.5fr 0.5fr 0.25fr 0.2fr/ 0.5fr  0.5fr;
+        grid-template-areas:
+    "Header Header"
+    "Work-Title Work-Title"
+    "Picture-1 Picture-2"
+    "Picture-3 Picture-4"
+    "Picture-5 Picture-6"
+    "Contact-Us Contact-Us"
+    "Home-Footer Home-Footer";
+    }
+    .Picture-1-Container{
+        margin: 0 0 0 95px;
+    }
+    .Picture-2-Container{
+        margin: 0 95px 0 0;
+    }
+    .Picture-3-Container{
+        margin: 0 0 0 95px;
+    }
+    .Picture-4-Container{
+        margin: 0 95px 0 0;
+    }
+    .Picture-5-Container{
+        margin: 0 0 0 95px;
+    }
+    .Picture-6-Container{
+        margin: 0 95px 0 0;
+    }
+    .Contact-Us{
+        margin: 0 0 0 95px;
+    }
+    h1{
+        width: 600px;
+        font-size: 41px;
+        line-height: 50px;
+        font-weight: 900;
+    }
+    h3{
+        font-size: 27px;
+        line-height: 28px;
+        font-weight: 800;
+    }
+    .Contact-Us h1 {
+        width: 600px;
+    }
+}
+@media screen and (min-width: 1100px){
+    .Work-Container{
+        width: 100vw;
+        display: grid;
+        grid-template:  0.01fr 0.2fr 0.5fr 0.5fr 0.5fr 0.25fr 0.2fr/ 0.5fr  0.5fr;
+        grid-template-areas:
+    "Header Header"
+    "Work-Title Work-Title"
+    "Picture-1 Picture-2"
+    "Picture-3 Picture-4"
+    "Picture-5 Picture-6"
+    "Contact-Us Contact-Us"
+    "Home-Footer Home-Footer";
+    }
 
-/*}*/
+    .Picture-1-Container{
+        margin: 0 0 0 95px;
+    }
+    .Picture-2-Container{
+        margin: 0 95px 0 0;
+    }
+    .Picture-3-Container{
+        margin: 0 0 0 95px;
+    }
+    .Picture-4-Container{
+        margin: 0 95px 0 0;
+    }
+    .Picture-5-Container{
+        margin: 0 0 0 95px;
+    }
+    .Picture-6-Container{
+        margin: 0 95px 0 0;
+    }
+    .Contact-Us{
+        margin: 0 0 0 95px;
+    }
+    h1{
+        font-size: 51px;
+    }
+    h3{
+        font-size: 29px;
+    }
+    .Contact-Us h1 {
+        width: 800px;
+    }
+}
+

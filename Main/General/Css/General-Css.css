@@ -1,19 +1,19 @@
-/*@font-face {*/
-/*    font-family: "Encode Sans" , sans-serif;*/
-/*    src: url("../../../Element/Fonts/Encode Sans/c4m_1mF4GcnstG_Jh1QH6ac4hNLeNyeYUpolKQY.woff2") format("woff2");*/
-/*}*/
+@font-face {
+    font-family: "Encode Sans" , sans-serif;
+    src: url("../../../Element/Fonts/Encode Sans") format("woff2");
+}
 @font-face {
     font-family: "Lora", sans-serif;
-    src: url("../../../Element/Fonts/Lora/0QIhMX1D_JOuMw_LIftL.woff2") format("woff");
+    src: url("../../../Element/Fonts/Lora") format("woff");
 }
 :root{
     --yellow-primary-color: #fff226;
     --yellow-secondary-color: #b8ad00;
     --yellow-tertiary-color: #f2e400;
     --grey-color: #cccccc;
-    --verylarge-fontsize: 3rem;
-    --large-fontsize: 2.3rem;
-    --medium-fontsize: 2rem;
-    --small-fontsize: 1.5rem;
+    --verylarge-fontsize: 51px;
+    --large-fontsize: 27px;
+    --medium-fontsize: 24px;
+    --small-fontsize:  24px;
     --verysmall-fontsize: 0.8rem;
 }
