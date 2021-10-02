@@ -7,16 +7,21 @@
     <link href="../../General/Css/General-Css.css" rel="stylesheet">
     <link href="../Css/Home-Css.css" rel="stylesheet">
     <link href="../Css/Header-Css.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 <body>
-
+<script src="../Js/Header.js"></script>
 <div class="Home-Container">
     <div class="Header-Background">
         <div class="Header-Home">
-            <a href="Home.html">
-                <img src="../Img/simple2.png">
-            </a>
-            <nav>
+            <div class="Header-Home-Logo">
+                <a href="Home.html">
+                    <img src="../Img/simple2.png">
+                </a>
+                <i class="material-icons" onclick="showMenu()">reorder</i>
+            </div>
+            <nav id="navList" >
                 <ul>
                     <li>
                         <a href="Home.html"><span>Home</span></a>
