@@ -1,0 +1,54 @@
+h1{
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0;
+    font-weight: 800;
+    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+}
+h2{
+    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    line-height: 42px;
+    letter-spacing: 0;
+    font-weight: 900;
+    color: #161922;
+}
+h3{
+    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+
+h4{
+    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: var(--grey-color);
+}
+h5{
+    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+    font-size: var(--verysmall-fontsize);
+    font-weight: lighter;
+    margin: 40px 0;
+}
+.Home-Title-Container h3{
+    color: var(--yellow-secondary-color);
+}
+.Text-Underline{
+    color: var(--grey-color);
+    text-underline: var(--grey-color);
+    border-bottom: var(--grey-color) 5px solid;
+    padding-bottom: 10px;
+    display: inline;
+}
+.DMS-Font{
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+    font-weight: 700;
+    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+    color: var(--grey-color)
+}
