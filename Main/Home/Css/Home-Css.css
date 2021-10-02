@@ -1,4 +1,4 @@
-Home-Container{
+.Home-Container{
     width: 750px;
     display: grid;
     grid-gap: 10px;
@@ -153,7 +153,7 @@ img{
 .Home-Footer{
     grid-area: Home-Footer;
 }
-@media screen and (min-width: 750px){
+@media screen and (min-width: 750px) {
     .Home-Container {
         width: 1100px;
         display: grid;
@@ -168,102 +168,68 @@ img{
     "Contact-Us Contact-Us Contact-Us"
     "Home-Footer Home-Footer Home-Footer";
     }
-    .Picture-1-Container{
-        margin: -180px 0 0 95px;
-    }
-    .Picture-2-Container{
-        margin: -180px 47px 0 47px;
-    }
-    .Picture-3-Container{
-        margin: -180px 95px 0 0;
-    }
-    .Picture-4-Container{
-        margin: 37px 0 0 95px;
-    }
-    .Picture-5-Container{
-        margin: 37px 47px 0 47px;
-    }
-    .Picture-6-Container{
-        margin: 37px 95px 0 0;
-    }
-    .Offer{
+
+    .Offer {
         margin: 0 95px 0 95px;
     }
-    .Design{
+
+    .Design {
         margin: 0 0 0 95px;
     }
-    .Motion{
+
+    .Motion {
         margin: 0 48px 0 47px;
     }
-    .Strategy{
+
+    .Strategy {
         margin: 0 95px 0 0;
     }
-    .Contact-Us{
+
+    .Contact-Us {
         margin: 0 0 0 95px;
     }
-    h1{
+
+    h1 {
         font-size: 41px;
         line-height: 50px;
         font-weight: 900;
     }
-    .Home-Title-Container h1{
+
+    .Home-Title-Container h1 {
         width: 500px;
     }
-    h2{
+
+    h2 {
         font-size: 34px;
         line-height: 42px;
         font-weight: 900;
     }
-    h3{
+
+    h3 {
         font-size: 27px;
         line-height: 28px;
         font-weight: 800;
     }
-    h4{
+
+    h4 {
         font-size: 22px;
         line-height: 25px;
     }
-    h5{
+
+    h5 {
         font-size: 14px;
     }
-    .Offer h2{
-        width: 600px;
-    }
-    .DMS-Font{
+
+    .DMS-Font {
         font-size: 24px;
         line-height: 28px;
         font-weight: 800;
-    }
-    .Contact-Us h1 {
-        width: 600px;
     }
 }
 @media screen and (min-width: 1100px){
     .Home-Container{
         width: 100vw;
-    }
-
-    .Picture-1-Container{
-        margin: -180px 0 0 95px;
-    }
-    .Picture-2-Container{
-        margin: -180px 47px 0 47px;
-    }
-    .Image-2-4{
-        height: 505px;
-        width: auto;
-    }
-    .Picture-3-Container{
-        margin: -180px 95px 0 0;
-    }
-    .Picture-4-Container{
-        margin: 37px 0 0 95px;
-    }
-    .Picture-5-Container{
-        margin: 37px 47px 0 47px;
-    }
-    .Picture-6-Container{
-        margin: 37px 95px 0 0;
+        gap: 40px;
     }
     .Offer{
         margin: 0 95px 0 95px;
@@ -305,9 +271,6 @@ img{
     }
     .DMS-Font{
         font-size: 30px;
-    }
-    .Contact-Us h1 {
-        width: 800px;
     }
 }
 
