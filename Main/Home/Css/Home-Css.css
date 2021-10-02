@@ -2,56 +2,16 @@
     width: 750px;
     display: grid;
     grid-gap: 10px;
-    grid-template: 0.01fr 0.5fr 0.2fr 0.25fr 0.25fr 0.25fr 0.25fr 1fr 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr/ 1fr;
+    grid-template: 0.1fr 0.4fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 1fr 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr/ 1fr;
     grid-template-areas:
-    "Header" "Home-Title" "Picture-1" "Picture-2" "Picture-3" "Picture-4"
+    "Home-Header" "Home-Title" "Picture-1" "Picture-2" "Picture-3" "Picture-4"
     "Picture-5" "Picture-6" "Offer" "Design" "Motion" "Strategy" "Contact-Us" "Home-Footer";
 }
-h1{
-    font-size: 36px;
-    line-height: 42px;
-    letter-spacing: 0;
-    font-weight: 800;
-    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+/*Header*/
+.Header-Background{
+    grid-area: Home-Header;
 }
-.Home-Title-Container h1{
-    width: 400px;
-}
-h2{
-    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
-    font-size: 34px;
-    line-height: 42px;
-    letter-spacing: 0;
-    font-weight: 900;
-    color: #161922;
-}
-h3{
-    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
-    font-size: 24px;
-    line-height: 24px;
-    letter-spacing: 0;
-    font-weight: 700;
-}
-.Home-Title-Container h3{
-    color: var(--yellow-secondary-color);
-}
-
-h4{
-    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0;
-    color: var(--grey-color);
-}
-h5{
-    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
-    font-size: var(--verysmall-fontsize);
-    font-weight: lighter;
-    margin: 40px 0;
-}
-.Header-Home{
-    grid-area: Header;
-}
+/*Home-Title*/
 .Home-Title{
     grid-area: Home-Title;
     background-color: var(--yellow-primary-color);
@@ -72,11 +32,12 @@ img{
     display: block;
     width: 100%;
     height: auto;
-    transition: .5s ease-in-out;
+    position: relative;
+    transition: .5s ease;
     backface-visibility: hidden;
     box-sizing: border-box;
 }
-.Picture-Bg{
+.Picture-Bg {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -92,7 +53,7 @@ img{
 }
 .Picture-text{
     color: white;
-    font-size: 20px;
+    font-size: 35px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -101,39 +62,45 @@ img{
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.Picture-1-Container{
+.Picture{
+    transition: all 2s;
+}
+.Picture-Container{
+    overflow: hidden;
+}
+/*Picture-Hover*/
+.Picture-Container:hover .Picture-Bg{
+    opacity: 0.7;
+}
+.Picture-Container:hover .Picture{
+    transform: scale(1.1);
+}
+.Picture-6-Container:hover{
+    background-image: url("../Img/simple2-home-portfolio-project-6b.png");
+}
+/*Picture-position*/
+.Picture-1-Home{
+    grid-area: Picture-1;
     position: relative;
     grid-area: Picture-1;
     margin: -180px 95px 0 95px;
 }
-.Picture-Bg:hover{
-    opacity: 0.7;
-}
-.Picture-2-Container{
+.Picture-2-Home{
     position: relative;
     grid-area: Picture-2;
     margin: 0 95px 0 95px;
 }
-.Picture-Bg-2{
-    background-color: rgba(255,4,55,0.8);
-}
-.Picture-3-Container{
+.Picture-3-Home{
     position: relative;
     grid-area: Picture-3;
     margin: 0 95px 0 95px;
 }
-.Picture-Bg-3{
-    background-color: rgba(228,157,51,0.8);
-}
-.Picture-4-Container{
+.Picture-4-Home{
     position: relative;
     grid-area: Picture-4;
     margin: 0 95px 0 95px;
 }
-.Picture-Bg-4 {
-    background-color: rgba(57,97,143,0.8);
-}
-.Picture-5-Container{
+.Picture-5-Home{
     position: relative;
     grid-area: Picture-5;
     margin: 0 95px 0 95px;
@@ -148,9 +115,24 @@ img{
     margin: 0 95px 0 95px;
     background-image:  url("../Img/simple2-home-portfolio-project-6a.png");
 }
-.Picture-6-Container:hover{
-    background-image: url("../Img/simple2-home-portfolio-project-6b.png");
+/*Picture-Background*/
+.Picture-Bg-1{
+    background-color: rgba(0,0,0,0.8);
 }
+.Picture-Bg-2{
+    background-color: rgba(255,4,55,0.8);
+}
+.Picture-Bg-3{
+    background-color: rgba(228,157,51,0.8);
+}
+
+.Picture-Bg-4 {
+    background-color: rgba(57,97,143,0.8);
+}
+.Picture-Bg-5 {
+    background-color: rgba(0,0,0,0.8);
+}
+/*Offer*/
 .Offer{
     grid-area: Offer;
     margin: 0 95px;
@@ -162,21 +144,7 @@ img{
     text-underline: black;
     color: inherit;
 }
-.Text-Underline{
-    color: var(--grey-color);
-    text-underline: var(--grey-color);
-    border-bottom: var(--grey-color) 5px solid;
-    padding-bottom: 10px;
-    display: inline;
-}
-.DMS-Font{
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0;
-    font-weight: 700;
-    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
-    color: var(--grey-color)
-}
+/*DMS*/
 .Design{
     grid-area: Design;
     margin: 0 95px;
@@ -189,6 +157,7 @@ img{
     grid-area: Strategy;
     margin: 0 95px;
 }
+/*Contact-US*/
 .Contact-Us{
     grid-area: Contact-Us;
     margin: 20px 95px;
@@ -201,16 +170,17 @@ img{
     text-underline: var(--yellow-tertiary-color);
     color: inherit;
 }
+/*Footer*/
 .Home-Footer{
     grid-area: Home-Footer;
 }
-@media screen and (min-width: 750px){
+@media screen and (min-width: 750px) {
     .Home-Container {
         width: 1100px;
         display: grid;
         grid-template:  0.1fr 0.2fr 0.5fr 0.5fr 0.25fr 0.2fr 0.2fr/ 0.33fr 0.33fr 0.33fr;
         grid-template-areas:
-    "Header Header Header"
+    "Home-Header Home-Header Home-Header"
     "Home-Title Home-Title Home-Title"
     "Picture-1 Picture-2 Picture-3"
     "Picture-4 Picture-5 Picture-6"
@@ -219,68 +189,56 @@ img{
     "Contact-Us Contact-Us Contact-Us"
     "Home-Footer Home-Footer Home-Footer";
     }
-    .Picture-1-Container{
-        margin: -180px 0 0 95px;
-    }
-    .Picture-2-Container{
-        margin: -180px 47px 0 47px;
-    }
-    .Picture-3-Container{
-        margin: -180px 95px 0 0;
-    }
-    .Picture-4-Container{
-        margin: 37px 0 0 95px;
-    }
-    .Picture-5-Container{
-        margin: 37px 47px 0 47px;
-    }
-    .Picture-6-Container{
-        margin: 37px 95px 0 0;
-    }
-    .Offer{
+    .Offer {
         margin: 0 95px 0 95px;
     }
-    .Design{
+    .Design {
         margin: 0 0 0 95px;
     }
-    .Motion{
+    .Motion {
         margin: 0 48px 0 47px;
     }
-    .Strategy{
+
+    .Strategy {
         margin: 0 95px 0 0;
     }
-    .Contact-Us{
+
+    .Contact-Us {
         margin: 0 0 0 95px;
     }
-    h1{
+
+    h1 {
         font-size: 41px;
         line-height: 50px;
         font-weight: 900;
     }
-    .Home-Title-Container h1{
+
+    .Home-Title-Container h1 {
         width: 500px;
     }
-    h2{
+
+    h2 {
         font-size: 34px;
         line-height: 42px;
         font-weight: 900;
     }
-    h3{
+
+    h3 {
         font-size: 27px;
         line-height: 28px;
         font-weight: 800;
     }
-    h4{
+
+    h4 {
         font-size: 22px;
         line-height: 25px;
     }
-    h5{
+
+    h5 {
         font-size: 14px;
     }
-    .Offer h2{
-        width: 600px;
-    }
-    .DMS-Font{
+
+    .DMS-Font {
         font-size: 24px;
         line-height: 28px;
         font-weight: 800;
@@ -292,29 +250,7 @@ img{
 @media screen and (min-width: 1100px){
     .Home-Container{
         width: 100vw;
-    }
-
-    .Picture-1-Container{
-        margin: -180px 0 0 95px;
-    }
-    .Picture-2-Container{
-        margin: -180px 47px 0 47px;
-    }
-    .Image-2-4{
-        height: 505px;
-        width: auto;
-    }
-    .Picture-3-Container{
-        margin: -180px 95px 0 0;
-    }
-    .Picture-4-Container{
-        margin: 37px 0 0 95px;
-    }
-    .Picture-5-Container{
-        margin: 37px 47px 0 47px;
-    }
-    .Picture-6-Container{
-        margin: 37px 95px 0 0;
+        gap: 40px;
     }
     .Offer{
         margin: 0 95px 0 95px;
