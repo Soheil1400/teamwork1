@@ -1,4 +1,4 @@
-.Home-Container{
+Home-Container{
     width: 750px;
     display: grid;
     grid-gap: 10px;
@@ -92,7 +92,7 @@ img{
 }
 .Picture-text{
     color: white;
-    font-size: 20px;
+    font-size: 35px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -101,10 +101,13 @@ img{
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.Picture-1-Container{
-    position: relative;
+.Picture-1-Home{
+
     grid-area: Picture-1;
     margin: -180px 95px 0 95px;
+}
+.Picture-1-Container{
+    position: relative;
 }
 .Picture-Bg:hover{
     opacity: 0.7;
