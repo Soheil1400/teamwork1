@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 @font-face {
     font-family: "Encode Sans" , sans-serif;
     src: url("../../../Element/Fonts/Encode Sans") format("woff2");
@@ -13,21 +17,18 @@
     --grey-color: #cccccc;
 }
 .Home-Container{
-    width: 90vw;
-    height: auto;
+    width: 100vw;
+    height: 300vh;
     display: grid;
-    grid-template: 0.1fr 0.8fr repeat(5  ,0.25fr) 1fr repeat(6 , 0.2fr) / 1fr;
+    grid-template: 0.2fr 0.8fr repeat(5  ,0.25fr) 1fr repeat(6 , 0.2fr) / 1fr;
     grid-template-areas:
     "Home-Header" "Top-Title" "Pic-1" "Pic-2" "Pic-3" "Pic-4" "Pic-5"
     "Pic-6" "Offer" "Design" "Motion" "Strategy" "Contact-Us" "Home-Footer";
-    justify-content: space-between;
-    align-items: end;
-    align-content: stretch;
+    /*justify-content: space-between;*/
+    /*align-items: end;*/
+    align-items: center;
+    /*align-content: stretch;*/
     justify-items: center;
-}
-.Home-Title{
-    justify-content: stretch;
-    width: 100vw;
 }
 /*Header*/
 .Header-Background{
@@ -37,11 +38,15 @@
 .Home-Title{
     grid-area: Top-Title;
     background-color: var(--yellow-primary-color);
-    width:100vw;
+    width:100%;
     padding: 150px 0;
+    display: flex;
+    justify-content: center;
 }
 .Home-Title-Container{
-    padding: 0 100px;
+    /*padding: 0 100px;*/
+    width: 80%;
+
 }
 /*Header-Button*/
 .Btn-Class{
@@ -51,7 +56,7 @@
     height: 60px;
 }
 /*Pictures*/
-img{
+.Picture-Container img{
     width: 100%;
     height: auto;
     position: relative;
@@ -66,7 +71,8 @@ img{
     overflow: hidden;
 }
 .Picture-1-Home{
-    width: 80vw;
+    /*width: 80vw;*/
+    width: 80%;
     grid-area: Pic-1;
     position: relative;
     margin-top: -80px;
@@ -151,6 +157,9 @@ img{
     grid-area: Offer;
     width: 80vw;
 }
+.Offer h3{
+    color: var(--grey-color);
+}
 .Offer-Link{
     text-underline: black;
     color: inherit;
@@ -188,9 +197,9 @@ img{
 
 /*Tablet*/
 /*Tablet*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 750px) and (max-width: 1000px) {
     .Home-Container {
-        width: 90vw;
+        width: 100vw;
         display: grid;
         grid-template: 0.1fr 0.4fr repeat(2, 0.25fr) repeat(4, 0.2fr) / repeat(3, 0.33fr);
         grid-template-areas:
@@ -240,7 +249,7 @@ img{
 
 @media screen and (min-width: 1025px){
     .Home-Container {
-        width: 90vw;
+        width: 100vw;
         display: grid;
         grid-template: 0.1fr 0.8fr repeat(2, 0.25fr) repeat(4, 0.2fr) / repeat(3, 33fr);
         grid-template-areas:
@@ -255,15 +264,15 @@ img{
     }
     .Picture-1-Home {
         width: 25vw;
-        margin-top: -150px;
+        margin-top: -120px;
     }
     .Picture-2-Home{
         width: 25vw;
-        margin-top: -150px;
+        margin-top: -120px;
     }
     .Picture-3-Home{
         width: 25vw;
-        margin-top: -150px;
+        margin-top: -120px;
     }
     .Picture-4-Home{
         width: 25vw;

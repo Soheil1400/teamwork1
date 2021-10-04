@@ -1,5 +1,6 @@
 .Work-Container{
-    width: 90vw;
+    width: 100vw;
+    height: auto;
     display: grid;
     grid-template: 0.1fr 0.4fr repeat(5  ,0.25fr) 1fr repeat(2 , 0.2fr) / 1fr;
     grid-template-areas:
@@ -10,31 +11,19 @@
     align-content: stretch;
     justify-items: center;
 }
-h1{
-    font-size: var(--verylarge-fontsize);
-    font-family:"Encode Sans Expanded", Helvetica, Arial, sans-serif;
-}
-h3{
-    font-family:  "Encode Sans Expanded", Helvetica, Arial, sans-serif;
-    font-size: var(--small-fontsize);
-    color: var(--grey-color);
-}
 /*#Headr*/
-
 .Header-Background{
     grid-area: Work-Header;
 }
 /*Titel*/
-
 .Work-Title{
     grid-area: Work-Title;
-    justify-content: stretch;
-    width: 100vw;
 }
 .Work-Title-Container{
-    text-align: left;
-    padding: 20px 100px;
-    box-sizing: border-box;
+  margin: 0 60px
+}
+.Work-Title-Container h3{
+    color: var(--grey-color);
 }
 /*Pictures*/
 img{
@@ -132,18 +121,16 @@ img{
     background-image: url("../../../Element/Img/simple2-home-portfolio-project-6b.png");
 }
 /*Contact Us*/
-
 .Contact-Us{
     grid-area: Contact-Us;
-    margin: 50px 130px;
     color: var(--yellow-tertiary-color);
+    margin: 0 60px
 }
 .Contact-Us-link{
     text-underline: var(--yellow-tertiary-color);
     color: inherit;
 }
 /*Footer*/
-
 .Work-Footer{
     grid-area: Work-Footer;
 }
@@ -163,7 +150,7 @@ img{
     "Work-Footer Work-Footer";
     }
     .Picture-1-Home {
-        width: 30vw;
+        width: 40vw;
     }
     .Picture-2-Home{
         width: 40vw;
@@ -180,16 +167,17 @@ img{
     .Picture-6-Container{
         width: 40vw;
     }
-    h1{
-        font-size: 41px;
-        line-height: 50px;
-        font-weight: 900;
-    }
-    h3{
-        font-size: 27px;
-        line-height: 28px;
-        font-weight: 800;
-    }
+
+    /*h1{*/
+    /*    font-size: 41px;*/
+    /*    line-height: 50px;*/
+    /*    font-weight: 900;*/
+    /*}*/
+    /*h3{*/
+    /*    font-size: 27px;*/
+    /*    line-height: 28px;*/
+    /*    font-weight: 800;*/
+    /*}*/
 }
 
 /*Laptop*/
@@ -226,11 +214,11 @@ img{
     .Picture-6-Container{
         width: 40vw;
     }
-    h1{
-        font-size: 51px;
-    }
-    h3{
-        font-size: 29px;
-    }
+    /*h1{*/
+    /*    font-size: 51px;*/
+    /*}*/
+    /*h3{*/
+    /*    font-size: 29px;*/
+    /*}*/
 }
 
