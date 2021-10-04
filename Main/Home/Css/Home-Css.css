@@ -78,27 +78,27 @@
     margin-top: -80px;
 }
 .Picture-2-Home{
-    width: 80vw;
+    width: 80%;
     grid-area: Pic-2;
     position: relative;
 }
 .Picture-3-Home{
-    width: 80vw;
+    width: 80%;
     grid-area: Pic-3;
     position: relative;
 }
 .Picture-4-Home{
-    width: 80vw;
+    width:  80%;
     grid-area: Pic-4;
     position: relative;
 }
 .Picture-5-Home{
-    width: 80vw;
+    width:  80%;;
     grid-area: Pic-5;
     position: relative;
 }
 .Picture-6-Container {
-    width: 80vw;
+    width:  80%;;
     grid-area: Pic-6;
     background-size: cover;
     background-repeat: no-repeat;
@@ -155,7 +155,7 @@
 /*Offer*/
 .Offer {
     grid-area: Offer;
-    width: 80vw;
+    width: 80%;;
 }
 .Offer h3{
     color: var(--grey-color);
@@ -167,16 +167,16 @@
 /*DMS*/
 .Design{
     grid-area: Design;
-    width: 80vw;
+    width: 80%;
 
 }
 .Motion{
     grid-area: Motion;
-    width: 80vw;
+    width: 80%;;
 }
 .Strategy{
     grid-area: Strategy;
-    width: 80vw;
+    width:  80%;
 }
 /*Contact-US*/
 .Contact-Us{
