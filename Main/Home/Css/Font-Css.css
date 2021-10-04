@@ -30,9 +30,10 @@ h4{
 }
 h5{
     font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
-    font-size: var(--verysmall-fontsize);
+    font-size: 15px;
     font-weight: lighter;
     margin: 40px 0;
+    color: black;
 }
 .Home-Title-Container h3{
     color: var(--yellow-secondary-color);
@@ -51,4 +52,69 @@ h5{
     font-weight: 700;
     font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
     color: var(--grey-color)
+}
+/*Tablet*/
+/*Tablet*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 45px;
+        line-height: 45px;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-size: 41px;
+        line-height: 45px;
+        font-weight: 1000;
+    }
+
+    h3 {
+        font-size: 28px;
+        line-height: 26px;
+        font-weight: 800;
+    }
+
+    h4 {
+        font-size: 21px;
+        line-height: 25px;
+    }
+
+    h5 {
+        font-size: 18px;
+        margin: 42px 0;
+    }
+
+    .Text-Underline {
+        padding-bottom: 15px;
+    }
+
+    .DMS-Font {
+        font-size: 24px;
+        font-weight: 800;
+    }
+}
+@media screen and (min-width: 1025px){
+    h1 {
+        font-size: 51px;
+        line-height: 50px;
+        font-weight: 900;
+    }
+    h2
+    {
+        font-size: 40px;
+        line-height: 42px;
+        font-weight: 900;
+    }
+    h3 {
+        font-size: 31px;
+        line-height: 28px;
+        font-weight: 800;
+    }
+    h4 {
+        font-size: 26px;
+        line-height: 25px;
+    }
+    h5 {
+        font-size: 18px;
+    }
 }

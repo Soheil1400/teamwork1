@@ -1,11 +1,33 @@
+@font-face {
+    font-family: "Encode Sans" , sans-serif;
+    src: url("../../../Element/Fonts/Encode Sans") format("woff2");
+}
+@font-face {
+    font-family: "Lora", sans-serif;
+    src: url("../../../Element/Fonts/Encode Sans") format("woff");
+}
+:root{
+    --yellow-primary-color: #fff226;
+    --yellow-secondary-color: #b8ad00;
+    --yellow-tertiary-color: #f2e400;
+    --grey-color: #cccccc;
+}
 .Home-Container{
-    width: 750px;
+    width: 90vw;
+    height: auto;
     display: grid;
-    grid-gap: 10px;
-    grid-template: 0.1fr 0.4fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 1fr 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr/ 1fr;
+    grid-template: 0.1fr 0.8fr repeat(5  ,0.25fr) 1fr repeat(6 , 0.2fr) / 1fr;
     grid-template-areas:
-    "Home-Header" "Home-Title" "Picture-1" "Picture-2" "Picture-3" "Picture-4"
-    "Picture-5" "Picture-6" "Offer" "Design" "Motion" "Strategy" "Contact-Us" "Home-Footer";
+    "Home-Header" "Top-Title" "Pic-1" "Pic-2" "Pic-3" "Pic-4" "Pic-5"
+    "Pic-6" "Offer" "Design" "Motion" "Strategy" "Contact-Us" "Home-Footer";
+    justify-content: space-between;
+    align-items: end;
+    align-content: stretch;
+    justify-items: center;
+}
+.Home-Title{
+    justify-content: stretch;
+    width: 100vw;
 }
 /*Header*/
 .Header-Background{
@@ -13,30 +35,70 @@
 }
 /*Home-Title*/
 .Home-Title{
-    grid-area: Home-Title;
+    grid-area: Top-Title;
     background-color: var(--yellow-primary-color);
+    width:100vw;
+    padding: 150px 0;
 }
 .Home-Title-Container{
-    text-align: left;
-    padding: 80px 100px 200px 100px;
-    box-sizing: border-box;
+    padding: 0 100px;
 }
+/*Header-Button*/
 .Btn-Class{
     border: none;
     background-color: white;
     width:200px;
     height: 60px;
 }
+/*Pictures*/
 img{
-    opacity: 1;
-    display: block;
     width: 100%;
     height: auto;
     position: relative;
-    transition: .5s ease;
-    backface-visibility: hidden;
+    transition: 0.2s ease;
+    size: inherit;
     box-sizing: border-box;
 }
+.Picture{
+    transition: all 0.2s;
+}
+.Picture-Container{
+    overflow: hidden;
+}
+.Picture-1-Home{
+    width: 80vw;
+    grid-area: Pic-1;
+    position: relative;
+    margin-top: -80px;
+}
+.Picture-2-Home{
+    width: 80vw;
+    grid-area: Pic-2;
+    position: relative;
+}
+.Picture-3-Home{
+    width: 80vw;
+    grid-area: Pic-3;
+    position: relative;
+}
+.Picture-4-Home{
+    width: 80vw;
+    grid-area: Pic-4;
+    position: relative;
+}
+.Picture-5-Home{
+    width: 80vw;
+    grid-area: Pic-5;
+    position: relative;
+}
+.Picture-6-Container {
+    width: 80vw;
+    grid-area: Pic-6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6a.png");
+}
+/*Picture-BackGrounds*/
 .Picture-Bg {
     position: absolute;
     top: 0;
@@ -50,23 +112,29 @@ img{
 }
 .Picture-Bg-1{
     background-color: rgba(0,0,0,0.8);
+
 }
+.Picture-Bg-2{
+    background-color: rgba(255,4,55,0.8);
+}
+.Picture-Bg-3{
+    background-color: rgba(228,157,51,0.8);
+}
+.Picture-Bg-4 {
+    background-color: rgba(57,97,143,0.8);
+}
+.Picture-Bg-5 {
+    background-color: rgba(0,0,0,0.8);
+}
+/*Picture-Text*/
 .Picture-text{
     color: white;
     font-size: 35px;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-}
-.Picture{
-    transition: all 2s;
-}
-.Picture-Container{
-    overflow: hidden;
 }
 /*Picture-Hover*/
 .Picture-Container:hover .Picture-Bg{
@@ -76,69 +144,12 @@ img{
     transform: scale(1.1);
 }
 .Picture-6-Container:hover{
-    background-image: url("../Img/simple2-home-portfolio-project-6b.png");
-}
-/*Picture-position*/
-.Picture-1-Home{
-    grid-area: Picture-1;
-    position: relative;
-    grid-area: Picture-1;
-    margin: -180px 95px 0 95px;
-}
-.Picture-2-Home{
-    position: relative;
-    grid-area: Picture-2;
-    margin: 0 95px 0 95px;
-}
-.Picture-3-Home{
-    position: relative;
-    grid-area: Picture-3;
-    margin: 0 95px 0 95px;
-}
-.Picture-4-Home{
-    position: relative;
-    grid-area: Picture-4;
-    margin: 0 95px 0 95px;
-}
-.Picture-5-Home{
-    position: relative;
-    grid-area: Picture-5;
-    margin: 0 95px 0 95px;
-}
-.Picture-Bg-5 {
-    background-color: rgba(0,0,0,0.8);
-}
-.Picture-6-Container{
-    background-size: cover;
-    background-repeat: no-repeat;
-    grid-area: Picture-6;
-    margin: 0 95px 0 95px;
-    background-image:  url("../Img/simple2-home-portfolio-project-6a.png");
-}
-/*Picture-Background*/
-.Picture-Bg-1{
-    background-color: rgba(0,0,0,0.8);
-}
-.Picture-Bg-2{
-    background-color: rgba(255,4,55,0.8);
-}
-.Picture-Bg-3{
-    background-color: rgba(228,157,51,0.8);
-}
-
-.Picture-Bg-4 {
-    background-color: rgba(57,97,143,0.8);
-}
-.Picture-Bg-5 {
-    background-color: rgba(0,0,0,0.8);
+    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6b.png");
 }
 /*Offer*/
-.Offer{
+.Offer {
     grid-area: Offer;
-    margin: 0 95px;
-}
-.Offer h2{
-    width: 500px;
+    width: 80vw;
 }
 .Offer-Link{
     text-underline: black;
@@ -147,23 +158,23 @@ img{
 /*DMS*/
 .Design{
     grid-area: Design;
-    margin: 0 95px;
+    width: 80vw;
+
 }
 .Motion{
     grid-area: Motion;
-    margin: 0 95px;
+    width: 80vw;
 }
 .Strategy{
     grid-area: Strategy;
-    margin: 0 95px;
+    width: 80vw;
 }
 /*Contact-US*/
 .Contact-Us{
     grid-area: Contact-Us;
-    margin: 20px 95px;
+    width: 80vw;
 }
 .Contact-Us h1{
-    width: 500px;
     color: var(--yellow-tertiary-color);
 }
 .Contact-Us-link{
@@ -174,127 +185,102 @@ img{
 .Home-Footer{
     grid-area: Home-Footer;
 }
-@media screen and (min-width: 750px) {
+
+/*Tablet*/
+/*Tablet*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .Home-Container {
-        width: 1100px;
+        width: 90vw;
         display: grid;
-        grid-template:  0.1fr 0.2fr 0.5fr 0.5fr 0.25fr 0.2fr 0.2fr/ 0.33fr 0.33fr 0.33fr;
+        grid-template: 0.1fr 0.4fr repeat(2, 0.25fr) repeat(4, 0.2fr) / repeat(3, 0.33fr);
         grid-template-areas:
     "Home-Header Home-Header Home-Header"
-    "Home-Title Home-Title Home-Title"
-    "Picture-1 Picture-2 Picture-3"
-    "Picture-4 Picture-5 Picture-6"
+    "Top-Title Top-Title Top-Title"
+    "Pic-1 Pic-2 Pic-3"
+    "Pic-4 Pic-5 Pic-6"
     "Offer Offer Offer"
     "Design Motion Strategy"
     "Contact-Us Contact-Us Contact-Us"
     "Home-Footer Home-Footer Home-Footer";
     }
-    .Offer {
-        margin: 0 95px 0 95px;
+    .Picture-1-Home {
+        width: 25vw;
+        margin-top: -120px;
     }
-    .Design {
-        margin: 0 0 0 95px;
+    .Picture-2-Home{
+        width: 25vw;
+        margin-top: -120px;
     }
-    .Motion {
-        margin: 0 48px 0 47px;
+    .Picture-3-Home{
+        width: 25vw;
+        margin-top: -120px;
     }
-
-    .Strategy {
-        margin: 0 95px 0 0;
+    .Picture-4-Home{
+        width: 25vw;
     }
-
-    .Contact-Us {
-        margin: 0 0 0 95px;
+    .Picture-5-Home{
+        width: 25vw;
     }
-
-    h1 {
-        font-size: 41px;
-        line-height: 50px;
-        font-weight: 900;
-    }
-
-    .Home-Title-Container h1 {
-        width: 500px;
-    }
-
-    h2 {
-        font-size: 34px;
-        line-height: 42px;
-        font-weight: 900;
-    }
-
-    h3 {
-        font-size: 27px;
-        line-height: 28px;
-        font-weight: 800;
-    }
-
-    h4 {
-        font-size: 22px;
-        line-height: 25px;
-    }
-
-    h5 {
-        font-size: 14px;
-    }
-
-    .DMS-Font {
-        font-size: 24px;
-        line-height: 28px;
-        font-weight: 800;
-    }
-    .Contact-Us h1 {
-        width: 600px;
-    }
-}
-@media screen and (min-width: 1100px){
-    .Home-Container{
-        width: 100vw;
-        gap: 40px;
-    }
-    .Offer{
-        margin: 0 95px 0 95px;
+    .Picture-6-Container{
+        width: 25vw;
     }
     .Design{
-        margin: 0 0 0 95px;
+        width:25vw;
     }
     .Motion{
-        margin: 0 48px 0 47px;
+        width: 25vw;
     }
     .Strategy{
-        margin: 0 95px 0 0;
-    }
-    .Contact-Us{
-        margin: 0 0 0 95px;
-    }
-    h1{
-        font-size: 51px;
-    }
-    .Home-Title-Container h1{
-        width: 600px;
-    }
-    h2{
-        font-size: 40px;
-        line-height: 42px;
-    }
-    h3{
-        font-size: 29px;
-
-    }
-    h4{
-        font-size: 24px;
-    }
-    h5{
-        font-size: 16px;
-    }
-    .Offer h2{
-        width: 800px;
-    }
-    .DMS-Font{
-        font-size: 30px;
-    }
-    .Contact-Us h1 {
-        width: 800px;
+        width: 25vw;
     }
 }
 
+/*Laptop*/
+/*Laptop*/
+
+@media screen and (min-width: 1025px){
+    .Home-Container {
+        width: 90vw;
+        display: grid;
+        grid-template: 0.1fr 0.8fr repeat(2, 0.25fr) repeat(4, 0.2fr) / repeat(3, 33fr);
+        grid-template-areas:
+    "Home-Header Home-Header Home-Header"
+    "Top-Title Top-Title Top-Title"
+    "Pic-1 Pic-2 Pic-3"
+    "Pic-4 Pic-5 Pic-6"
+    "Offer Offer Offer"
+    "Design Motion Strategy"
+    "Contact-Us Contact-Us Contact-Us"
+    "Home-Footer Home-Footer Home-Footer";
+    }
+    .Picture-1-Home {
+        width: 25vw;
+        margin-top: -150px;
+    }
+    .Picture-2-Home{
+        width: 25vw;
+        margin-top: -150px;
+    }
+    .Picture-3-Home{
+        width: 25vw;
+        margin-top: -150px;
+    }
+    .Picture-4-Home{
+        width: 25vw;
+    }
+    .Picture-5-Home{
+        width: 25vw;
+    }
+    .Picture-6-Container{
+        width: 25vw;
+    }
+    .Design{
+        width:25vw;
+    }
+    .Motion{
+        width: 25vw;
+    }
+    .Strategy{
+        width: 25vw;
+    }
+}

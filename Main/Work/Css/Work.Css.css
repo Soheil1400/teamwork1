@@ -1,11 +1,14 @@
 .Work-Container{
-    width: 750px;
+    width: 90vw;
     display: grid;
-    grid-gap: 10px;
-    grid-template:  0.01fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 1fr 0.2fr 0.2fr/ 1fr;
+    grid-template: 0.1fr 0.4fr repeat(5  ,0.25fr) 1fr repeat(2 , 0.2fr) / 1fr;
     grid-template-areas:
-    "Header" "Work-Title" "Picture-1" "Picture-2" "Picture-3" "Picture-4"
-    "Picture-5" "Picture-6" "Contact-Us" "Work-Footer";
+    "Work-Header" "Work-Title" "Pic-1" "Pic-2" "Pic-3" "Pic-4"
+    "Pic-5" "Pic-6" "Contact-Us" "Work-Footer";
+    justify-content: space-between;
+    align-items: end;
+    align-content: stretch;
+    justify-items: center;
 }
 h1{
     font-size: var(--verylarge-fontsize);
@@ -16,30 +19,72 @@ h3{
     font-size: var(--small-fontsize);
     color: var(--grey-color);
 }
-.Header-Work{
-    grid-area: Header;
+/*#Headr*/
+
+.Header-Background{
+    grid-area: Work-Header;
 }
+/*Titel*/
+
 .Work-Title{
     grid-area: Work-Title;
+    justify-content: stretch;
+    width: 100vw;
 }
 .Work-Title-Container{
     text-align: left;
     padding: 20px 100px;
     box-sizing: border-box;
 }
+/*Pictures*/
 img{
-    opacity: 1;
-    display: block;
     width: 100%;
     height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
+    position: relative;
+    transition: 0.2s ease;
+    size: inherit;
     box-sizing: border-box;
 }
-img:hover{
-    transform: perspective(100px);
+.Picture{
+    transition: all 0.2s;
 }
-.Picture-Bg{
+.Picture-Container{
+    overflow: hidden;
+}
+.Picture-1-Home{
+    width: 80vw;
+    grid-area: Pic-1;
+    position: relative;
+}
+.Picture-2-Home{
+    width: 80vw;
+    grid-area: Pic-2;
+    position: relative;
+}
+.Picture-3-Home{
+    width: 80vw;
+    grid-area: Pic-3;
+    position: relative;
+}
+.Picture-4-Home{
+    width: 80vw;
+    grid-area: Pic-4;
+    position: relative;
+}
+.Picture-5-Home{
+    width: 80vw;
+    grid-area: Pic-5;
+    position: relative;
+}
+.Picture-6-Container {
+    width: 80vw;
+    grid-area: Pic-6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6a.png");
+}
+/*Picture-BackGrounds*/
+.Picture-Bg {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -52,115 +97,88 @@ img:hover{
 }
 .Picture-Bg-1{
     background-color: rgba(0,0,0,0.8);
-}
-.Picture-text{
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-.Picture-1-Container{
-    position: relative;
-    grid-area: Picture-1;
-    margin: 0 95px 0 95px;
-}
-.Picture-Bg:hover{
-    opacity: 0.7;
-}
-.Picture-2-Container{
-    position: relative;
-    grid-area: Picture-2;
-    margin: 0 95px 0 95px;
+
 }
 .Picture-Bg-2{
     background-color: rgba(255,4,55,0.8);
 }
-.Picture-3-Container{
-    position: relative;
-    grid-area: Picture-3;
-    margin: 0 95px 0 95px;
-}
 .Picture-Bg-3{
     background-color: rgba(228,157,51,0.8);
-}
-.Picture-4-Container{
-    position: relative;
-    grid-area: Picture-4;
-    margin: 0 95px 0 95px;
 }
 .Picture-Bg-4 {
     background-color: rgba(57,97,143,0.8);
 }
-.Picture-5-Container{
-    position: relative;
-    grid-area: Picture-5;
-    margin: 0 95px 0 95px;
-}
 .Picture-Bg-5 {
     background-color: rgba(0,0,0,0.8);
 }
-.Picture-6-Container{
-    background-size: cover;
-    background-repeat: no-repeat;
-    grid-area: Picture-6;
-    margin: 0 95px 0 95px;
-    background-image:  url("../Img/simple2-home-portfolio-project-6a.png");
+/*Picture-Text*/
+.Picture-text{
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/*Picture-Hover*/
+.Picture-Container:hover .Picture-Bg{
+    opacity: 0.7;
+}
+.Picture-Container:hover .Picture{
+    transform: scale(1.1);
 }
 .Picture-6-Container:hover{
-    background-image: url("../Img/simple2-home-portfolio-project-6b.png");
+    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6b.png");
 }
+/*Contact Us*/
+
 .Contact-Us{
     grid-area: Contact-Us;
     margin: 50px 130px;
     color: var(--yellow-tertiary-color);
-
 }
 .Contact-Us-link{
     text-underline: var(--yellow-tertiary-color);
     color: inherit;
 }
+/*Footer*/
+
 .Work-Footer{
     grid-area: Work-Footer;
 }
-@media screen and (min-width: 750px){
+/*Tablet*/
+/*Tablet*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .Work-Container{
-        width: 1100px;
         display: grid;
-        grid-template:  0.01fr 0.2fr 0.5fr 0.5fr 0.5fr 0.25fr 0.2fr/0.5fr  0.5fr;
+        grid-template: 0.1fr 0.4fr repeat(3  ,0.5fr) repeat(2 , 0.2fr) /0.5fr  0.5fr;
         grid-template-areas:
-    "Header Header"
+    "Work-Header Work-Header"
     "Work-Title Work-Title"
-    "Picture-1 Picture-2"
-    "Picture-3 Picture-4"
-    "Picture-5 Picture-6"
+    "Pic-1 Pic-2"
+    "Pic-3 Pic-4"
+    "Pic-5 Pic-6"
     "Contact-Us Contact-Us"
     "Work-Footer Work-Footer";
     }
-    .Picture-1-Container{
-        margin: 0 0 0 95px;
+    .Picture-1-Home {
+        width: 30vw;
     }
-    .Picture-2-Container{
-        margin: 0 95px 0 0;
+    .Picture-2-Home{
+        width: 40vw;
     }
-    .Picture-3-Container{
-        margin: 0 0 0 95px;
+    .Picture-3-Home{
+        width: 40vw;
     }
-    .Picture-4-Container{
-        margin: 0 95px 0 0;
+    .Picture-4-Home{
+        width: 40vw;
     }
-    .Picture-5-Container{
-        margin: 0 0 0 95px;
+    .Picture-5-Home{
+        width: 40vw;
     }
     .Picture-6-Container{
-        margin: 0 95px 0 0;
-    }
-    .Contact-Us{
-        margin: 0 0 0 95px;
+        width: 40vw;
     }
     h1{
         font-size: 41px;
@@ -173,40 +191,40 @@ img:hover{
         font-weight: 800;
     }
 }
-@media screen and (min-width: 1100px){
+
+/*Laptop*/
+/*Laptop*/
+
+@media screen and (min-width: 1025px){
     .Work-Container{
-        width: 100vw;
         display: grid;
-        grid-template:  0.01fr 0.2fr 0.5fr 0.5fr 0.5fr 0.25fr 0.2fr/ 0.5fr  0.5fr;
+        grid-template: 0.1fr 0.4fr repeat(3  ,0.5fr) repeat(2 , 0.2fr) /0.5fr  0.5fr;
         grid-template-areas:
-    "Header Header"
+    "Work-Header Work-Header"
     "Work-Title Work-Title"
-    "Picture-1 Picture-2"
-    "Picture-3 Picture-4"
-    "Picture-5 Picture-6"
+    "Pic-1 Pic-2"
+    "Pic-3 Pic-4"
+    "Pic-5 Pic-6"
     "Contact-Us Contact-Us"
     "Work-Footer Work-Footer";
     }
-    .Picture-1-Container{
-        margin: 0 0 0 95px;
+    .Picture-1-Home {
+        width: 40vw;
     }
-    .Picture-2-Container{
-        margin: 0 95px 0 0;
+    .Picture-2-Home{
+        width: 40vw;
     }
-    .Picture-3-Container{
-        margin: 0 0 0 95px;
+    .Picture-3-Home{
+        width: 40vw;
     }
-    .Picture-4-Container{
-        margin: 0 95px 0 0;
+    .Picture-4-Home{
+        width: 40vw;
     }
-    .Picture-5-Container{
-        margin: 0 0 0 95px;
+    .Picture-5-Home{
+        width: 40vw;
     }
     .Picture-6-Container{
-        margin: 0 95px 0 0;
-    }
-    .Contact-Us{
-        margin: 0 0 0 95px;
+        width: 40vw;
     }
     h1{
         font-size: 51px;
