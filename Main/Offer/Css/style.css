@@ -16,6 +16,8 @@ html{
                          'content--motion'
                          'content--strategy';
     font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+    width: 80%;
+    margin: auto;
 }
 
 .explain {
@@ -38,7 +40,7 @@ p{
 
 .content--design {
     grid-area:content--design ;
-    width: 90%;
+    width: 95%;
     margin: 3rem auto;
 }
 
@@ -54,7 +56,7 @@ p{
 
 .content--motion {
     grid-area:content--motion ;
-    width: 90%;
+    width: 95%;
     margin: 3rem auto;
 }
 
@@ -70,7 +72,7 @@ p{
 
 .content--strategy {
     grid-area:content--strategy ;
-    width: 90%;
+    width: 95%;
     margin: 3rem auto;
 }
 
@@ -81,6 +83,7 @@ p{
 .properti--strategy{
     width: 90%;
 }
+
 
 @media only screen and (min-width: 1450px){
     h2 {
@@ -145,6 +148,7 @@ p{
 
     .content--design {
         display: flex;
+        justify-content: space-between;
     }
     .properti--design{
         width: 55rem;
