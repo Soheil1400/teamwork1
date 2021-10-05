@@ -1,130 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "Encode Sans" , sans-serif;
+    src: url("../../../Element/Fonts/Encode Sans") format("woff2");
+}
+@font-face {
+    font-family: "Lora", sans-serif;
+    src: url("../../../Element/Fonts/Encode Sans") format("woff");
+}
+:root{
+    --yellow-primary-color: #fff226;
+    --yellow-secondary-color: #b8ad00;
+    --yellow-tertiary-color: #f2e400;
+    --grey-color: #cccccc;
+}
 .Home-Container{
-    width: 100%;
+    width: 100vw;
+    height: 300vh;
     display: grid;
-    grid-gap: 10px;
-    grid-template: 85px 800px 400px 700px 700px 700px 700px 700px 400px 100px 100px 100px 200px 100px / 1fr;
+    grid-template: 0.2fr 0.8fr repeat(5  ,0.25fr) 1fr repeat(6 , 0.2fr) / 1fr;
     grid-template-areas:
-    "Header" "Home-Title" "Picture-1" "Picture-2" "Picture-3" "Picture-4"
-    "Picture-5" "Picture-6" "Offer" "Design" "Motion" "Strategy" "Contact-Us" "Home-Footer";
+    "Home-Header" "Top-Title" "Pic-1" "Pic-2" "Pic-3" "Pic-4" "Pic-5"
+    "Pic-6" "Offer" "Design" "Motion" "Strategy" "Contact-Us" "Home-Footer";
+    /*justify-content: space-between;*/
+    /*align-items: end;*/
+    align-items: center;
+    /*align-content: stretch;*/
+    justify-items: center;
 }
-h1{
-    font-size: var(--verylarge-fontsize);
-    font-family: "Lora", sans-serif;
+/*Header*/
+.Header-Background{
+    grid-area: Home-Header;
 }
-h2{
-    font-family: "Lora", sans-serif;
-    font-size: var(--large-fontsize);
-    font-weight: 800;
-}
-h3{
-    font-family: "Lora", sans-serif;
-    font-size: var(--small-fontsize);
-    color: var(--grey-color);
-}
-h5{
-    font-family: "Lora", sans-serif;
-    font-size: var(--verysmall-fontsize);
-    font-weight: lighter;
-}
-.Header.Home{
-    grid-area: Header-Home;
-}
+/*Home-Title*/
 .Home-Title{
-    grid-area: Home-Title;
+    grid-area: Top-Title;
     background-color: var(--yellow-primary-color);
+    width:100%;
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
 }
 .Home-Title-Container{
-    text-align: left;
-    padding: 120px 40px 200px 40px;
-    box-sizing: border-box;
+    /*padding: 0 100px;*/
+    width: 80%;
+
 }
+/*Header-Button*/
 .Btn-Class{
     border: none;
     background-color: white;
     width:200px;
     height: 60px;
 }
-.Background-picture{
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+/*Pictures*/
+.Picture-Container img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    transition: 0.2s ease;
+    size: inherit;
     box-sizing: border-box;
 }
-.Picture-1{
-    grid-area: Picture-1;
-    background-image: url("../Img/simple2-home-portfolio1.jpg");
-    margin: -300px 95px 0 95px;
+.Picture{
+    transition: all 0.2s;
 }
-.Picture-1:hover{
-    opacity: 0.3;
+.Picture-Container{
+    overflow: hidden;
 }
-.Picture-2{
-    grid-area: Picture-2;
-    background-image: url("../Gif/simple2_work2.gif");
+.Picture-1-Home{
+    /*width: 80vw;*/
+    width: 80%;
+    grid-area: Pic-1;
+    position: relative;
+    margin-top: -80px;
 }
-.Picture-2:hover{
-    opacity: 0.3;
+.Picture-2-Home{
+    width: 80%;
+    grid-area: Pic-2;
+    position: relative;
 }
-.Picture-3{
-    grid-area: Picture-3;
-    background-image: url("../Img/simple2-home-portfolio2.jpg");
+.Picture-3-Home{
+    width: 80%;
+    grid-area: Pic-3;
+    position: relative;
 }
-.Picture-3:hover{
-    opacity: 0.3;
+.Picture-4-Home{
+    width:  80%;
+    grid-area: Pic-4;
+    position: relative;
 }
-.Picture-4{
-    grid-area: Picture-4;
-    background-image: url("../Img/simple2-home-portfolio3.jpg");
+.Picture-5-Home{
+    width:  80%;;
+    grid-area: Pic-5;
+    position: relative;
 }
-.Picture-4:hover{
-    opacity: 0.3;
+.Picture-6-Container {
+    width:  80%;;
+    grid-area: Pic-6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6a.png");
 }
-.Picture-5{
-    grid-area: Picture-5;
-    background-image: url("../Img/simple2-home-portfolio4.jpg");
+/*Picture-BackGrounds*/
+.Picture-Bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
 }
-.Picture-5:hover{
-    opacity: 0.3;
+.Picture-Bg-1{
+    background-color: rgba(0,0,0,0.8);
+
 }
-.Picture-6{
-    grid-area: Picture-6;
-    background-image: url("../Img/simple2-home-portfolio-project-6a.png");
+.Picture-Bg-2{
+    background-color: rgba(255,4,55,0.8);
 }
-.Picture-6:hover{
-    background-image: url("../Img/simple2-home-portfolio-project-6b.png");
+.Picture-Bg-3{
+    background-color: rgba(228,157,51,0.8);
 }
-.Offer{
+.Picture-Bg-4 {
+    background-color: rgba(57,97,143,0.8);
+}
+.Picture-Bg-5 {
+    background-color: rgba(0,0,0,0.8);
+}
+/*Picture-Text*/
+.Picture-text{
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/*Picture-Hover*/
+.Picture-Container:hover .Picture-Bg{
+    opacity: 0.7;
+}
+.Picture-Container:hover .Picture{
+    transform: scale(1.1);
+}
+.Picture-6-Container:hover{
+    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6b.png");
+}
+/*Offer*/
+.Offer {
     grid-area: Offer;
-    margin: 50px 130px;
+    width: 80%;;
+}
+.Offer h3{
+    color: var(--grey-color);
 }
 .Offer-Link{
     text-underline: black;
     color: inherit;
 }
+/*DMS*/
 .Design{
     grid-area: Design;
-    margin: 0 130px;
+    width: 80%;
+
 }
 .Motion{
     grid-area: Motion;
-    margin: 0 130px;
+    width: 80%;;
 }
 .Strategy{
     grid-area: Strategy;
-    margin: 0 130px;
+    width:  80%;
 }
+/*Contact-US*/
 .Contact-Us{
     grid-area: Contact-Us;
-    margin: 20px 130px;
-    color: var(--yellow-secondary-color);
-
+    width: 80vw;
+}
+.Contact-Us h1{
+    color: var(--yellow-tertiary-color);
 }
 .Contact-Us-link{
-    text-underline: var(--yellow-secondary-color);
+    text-underline: var(--yellow-tertiary-color);
     color: inherit;
 }
+/*Footer*/
 .Home-Footer{
     grid-area: Home-Footer;
 }
 
+/*Tablet*/
+/*Tablet*/
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+    .Home-Container {
+        width: 100vw;
+        display: grid;
+        grid-template: 0.1fr 0.4fr repeat(2, 0.25fr) repeat(4, 0.2fr) / repeat(3, 0.33fr);
+        grid-template-areas:
+    "Home-Header Home-Header Home-Header"
+    "Top-Title Top-Title Top-Title"
+    "Pic-1 Pic-2 Pic-3"
+    "Pic-4 Pic-5 Pic-6"
+    "Offer Offer Offer"
+    "Design Motion Strategy"
+    "Contact-Us Contact-Us Contact-Us"
+    "Home-Footer Home-Footer Home-Footer";
+    }
+    .Picture-1-Home {
+        width: 25vw;
+        margin-top: -120px;
+    }
+    .Picture-2-Home{
+        width: 25vw;
+        margin-top: -120px;
+    }
+    .Picture-3-Home{
+        width: 25vw;
+        margin-top: -120px;
+    }
+    .Picture-4-Home{
+        width: 25vw;
+    }
+    .Picture-5-Home{
+        width: 25vw;
+    }
+    .Picture-6-Container{
+        width: 25vw;
+    }
+    .Design{
+        width:25vw;
+    }
+    .Motion{
+        width: 25vw;
+    }
+    .Strategy{
+        width: 25vw;
+    }
+}
 
+/*Laptop*/
+/*Laptop*/
+
+@media screen and (min-width: 1025px){
+    .Home-Container {
+        width: 100vw;
+        display: grid;
+        grid-template: 0.1fr 0.8fr repeat(2, 0.25fr) repeat(4, 0.2fr) / repeat(3, 33fr);
+        grid-template-areas:
+    "Home-Header Home-Header Home-Header"
+    "Top-Title Top-Title Top-Title"
+    "Pic-1 Pic-2 Pic-3"
+    "Pic-4 Pic-5 Pic-6"
+    "Offer Offer Offer"
+    "Design Motion Strategy"
+    "Contact-Us Contact-Us Contact-Us"
+    "Home-Footer Home-Footer Home-Footer";
+    }
+    .Picture-1-Home {
+        width: 25vw;
+        margin-top: -120px;
+    }
+    .Picture-2-Home{
+        width: 25vw;
+        margin-top: -120px;
+    }
+    .Picture-3-Home{
+        width: 25vw;
+        margin-top: -120px;
+    }
+    .Picture-4-Home{
+        width: 25vw;
+    }
+    .Picture-5-Home{
+        width: 25vw;
+    }
+    .Picture-6-Container{
+        width: 25vw;
+    }
+    .Design{
+        width:25vw;
+    }
+    .Motion{
+        width: 25vw;
+    }
+    .Strategy{
+        width: 25vw;
+    }
+}

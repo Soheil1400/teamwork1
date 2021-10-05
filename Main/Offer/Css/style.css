@@ -3,11 +3,6 @@ html{
 }
 :root{
     --grey-color: #CCCCCC;
-    --verylarge-fontsize: 3rem;
-    --large-fontsize: 2.3rem;
-    --medium-fontsize: 2rem;
-    --small-fontsize: 1.5rem;
-    --verysmall-fontsize: 0.8rem;
 }
 
 
@@ -15,7 +10,7 @@ html{
     height: 100vh;
     display: grid;
     grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr;
-    grid-gap: 10px 50px;
+    grid-gap: 10px ;
     grid-template-areas: 'header '
                          'content--design'
                          'content--motion'
@@ -30,13 +25,11 @@ html{
 h2 {
     font-size: 30px;
     line-height: 33px;
-    letter-spacing: 0px;
     font-weight: 800;
 }
 h3 {
     font-size: 24px;
     line-height: 24px;
-    letter-spacing: 0px;
     color: var(--grey-color);
 }
 p{
@@ -47,42 +40,42 @@ p{
     grid-area:content--design ;
     width: 90%;
     margin: 3rem auto;
-    /*display: flex;*/
 }
 
 .image--design{
-    /*display:block;*/
+
 }
 
 .properti--design{
     width: 90%;
-    box-sizing: border-box;
 }
+
+
 
 .content--motion {
     grid-area:content--motion ;
     width: 90%;
     margin: 3rem auto;
-    /*display: flex;*/
 }
 
 .image--motion{
-    display: block;
+
 }
 
 .properti--motion{
     width: 90%;
 }
 
+
+
 .content--strategy {
     grid-area:content--strategy ;
     width: 90%;
     margin: 3rem auto;
-    /*display: flex;*/
 }
 
 .image--strategy{
-    display:block;
+
 }
 
 .properti--strategy{
@@ -97,7 +90,6 @@ p{
     h3 {
         font-size: 38px;
         line-height: 42px;
-        color: var(--grey-color);
     }
     p{
         font-size: 26px;
@@ -145,7 +137,6 @@ p{
     h3 {
         font-size: 30px;
         line-height: 32px;
-        color: var(--grey-color);
     }
     p{
         font-size: 18px;
@@ -193,8 +184,6 @@ p{
     h3 {
         font-size: 28px;
         line-height: 30px;
-        letter-spacing: 0px;
-        color: var(--grey-color);
     }
     p{
         font-size: 15px;
