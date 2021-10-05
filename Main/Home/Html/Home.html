@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home-Page</title>
+    <link href="../../General/Css/General-Css.css" rel="stylesheet">
     <link href="../Css/Home-Css.css" rel="stylesheet">
     <link href="../../General/Css/General-Css.css" rel="stylesheet">
     <link href="../Css/Font-Css.css" rel="stylesheet">
     <link href="../Css/Header-Css.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 <body>
+<script src="../Js/Header.js"></script>
 <div class="Home-Container">
     <div class="Header-Background">
         <div class="Header-Home">
-            <a href="Home.html">
-                <img src="../../../Element/Img/simple2.png" alt="header-pic">
-            </a>
-            <nav>
+            <div class="Header-Home-Logo">
+                <a href="Home.html">
+                    <img src="../Img/simple2.png">
+                </a>
+                <i class="material-icons" onclick="showMenu()">reorder</i>
+            </div>
+            <nav id="navList" >
                 <ul>
                     <li>
                         <a href="Home.html"><span>Home</span></a>
