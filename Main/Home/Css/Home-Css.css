@@ -22,7 +22,7 @@
 /*Header*/
 .Header-Background{
     grid-area: Home-Header;
-    width: 80%;
+    width: 100%;
 }
 /*Home-Title*/
 .Home-Title{
