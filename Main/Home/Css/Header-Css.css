@@ -1,7 +1,7 @@
 .Header-Background {
     background-color: white;
     position: sticky;
-    top: 0px;
+    top: 0;
 }
 
 .Header-Home {
@@ -20,7 +20,7 @@
 
 .Header-Home ul {
     list-style-type: none;
-    padding-left: 0px;
+    padding-left: 0;
     background-color: white;
 }
 
@@ -81,7 +81,7 @@
     }
     .Header-Home nav {
         width: auto;
-        margin: 0px;
+        margin: 0;
         display: inline;
     }
     .Header-Home i {

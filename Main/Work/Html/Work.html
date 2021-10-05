@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Work-Page</title>
-    <link href="../../General/Css/General-Css.css" rel="stylesheet">
     <link href="../Css/Work.Css.css" rel="stylesheet">
     <link href="../../Home/Css/Font-Css.css" rel="stylesheet">
     <link href="../../Home/Css/Header-Css.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+<script src="../../Home/Js/Header.js"></script>
 <div class="Work-Container">
     <div class="Header-Background">
         <div class="Header-Home">
-            <a href="../../Home/Html/Home.html">
-                <img src="../../../Element/Img/simple2.png" alt="header-pic">
-            </a>
-            <nav>
+            <div class="Header-Home-Logo">
+                <a href="../../Home/Html/Home.html">
+                    <img src="../../../Element/Img/simple2.png" alt="Header-pic">
+                </a>
+                <i class="material-icons" onclick="showMenu()">reorder</i>
+            </div>
+            <nav id="navList" >
                 <ul>
                     <li>
                         <a href="../../Home/Html/Home.html"><span>Home</span></a>
