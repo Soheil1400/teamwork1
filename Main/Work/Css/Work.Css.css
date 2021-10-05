@@ -1,32 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --yellow-primary-color: #fff226;
+    --yellow-secondary-color: #b8ad00;
+    --yellow-tertiary-color: #f2e400;
+    --grey-color: #cccccc;
+}
 .Work-Container{
     width: 100vw;
-    height: auto;
+    height: 300vh;
     display: grid;
-    grid-template: 0.1fr 0.4fr repeat(5  ,0.25fr) 1fr repeat(2 , 0.2fr) / 1fr;
+    grid-gap: 5%;
+    grid-template: 0.1fr 0.8fr 1.5fr repeat(2 , 0.2fr) / 1fr;
     grid-template-areas:
-    "Work-Header" "Work-Title" "Pic-1" "Pic-2" "Pic-3" "Pic-4"
-    "Pic-5" "Pic-6" "Contact-Us" "Work-Footer";
-    justify-content: space-between;
-    align-items: end;
-    align-content: stretch;
+    "Work-Header" "Top-Title" "Box-1" "Contact-Us" "Work-Footer";
+    align-items: center;
     justify-items: center;
 }
-/*#Headr*/
+/*Header*/
 .Header-Background{
     grid-area: Work-Header;
 }
-/*Titel*/
-.Work-Title{
-    grid-area: Work-Title;
+/*Home-Title*/
+.Work-Title-Title{
+    grid-area: Top-Title;
+    width:80%;
 }
-.Work-Title-Container{
-  margin: 0 60px
+.Work-Title-Container h2{
+    width: 60%;
 }
 .Work-Title-Container h3{
     color: var(--grey-color);
 }
 /*Pictures*/
-img{
+.Box-1{
+    display: grid;
+    grid-area: Box-1;
+    width: 80%;
+    grid-gap: 10px;
+    grid-template: repeat(6 , auto) / 1fr;
+    grid-template-areas:
+    "Pic-1" "Pic-2" "Pic-3" "Pic-4" "Pic-5" "Pic-6";
+    align-items: center;
+    justify-items: center;
+}
+.Box-1 a{
+    position: relative
+}
+.Picture-Container{
+    overflow: hidden;
+}
+.Picture-Container img{
     width: 100%;
     height: auto;
     position: relative;
@@ -37,42 +63,37 @@ img{
 .Picture{
     transition: all 0.2s;
 }
-.Picture-Container{
-    overflow: hidden;
-}
 .Picture-1-Home{
-    width: 80vw;
     grid-area: Pic-1;
-    position: relative;
 }
 .Picture-2-Home{
-    width: 80vw;
     grid-area: Pic-2;
-    position: relative;
 }
 .Picture-3-Home{
-    width: 80vw;
     grid-area: Pic-3;
-    position: relative;
 }
 .Picture-4-Home{
-    width: 80vw;
     grid-area: Pic-4;
-    position: relative;
 }
 .Picture-5-Home{
-    width: 80vw;
     grid-area: Pic-5;
-    position: relative;
 }
-.Picture-6-Container {
-    width: 80vw;
-    grid-area: Pic-6;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6a.png");
+.Picture-6-Home {
+  grid-area: Pic-6;
 }
+
 /*Picture-BackGrounds*/
+.Picture-Bg-Special {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
 .Picture-Bg {
     position: absolute;
     top: 0;
@@ -86,7 +107,6 @@ img{
 }
 .Picture-Bg-1{
     background-color: rgba(0,0,0,0.8);
-
 }
 .Picture-Bg-2{
     background-color: rgba(255,4,55,0.8);
@@ -114,111 +134,94 @@ img{
 .Picture-Container:hover .Picture-Bg{
     opacity: 0.7;
 }
+
 .Picture-Container:hover .Picture{
     transform: scale(1.1);
 }
-.Picture-6-Container:hover{
-    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6b.png");
+.Picture-Container:hover .Picture-Bg-Special{
+    opacity: 1;
 }
-/*Contact Us*/
-.Contact-Us{
+.Picture-Container:hover .Picture-Special{
+    opacity: 0;
+}
+
+/*Contact-US*/
+.Contact-Us {
     grid-area: Contact-Us;
+    width: 80%;
+}
+.Contact-Us h2{
     color: var(--yellow-tertiary-color);
-    margin: 0 60px
+    width: 60%;
 }
 .Contact-Us-link{
     text-underline: var(--yellow-tertiary-color);
     color: inherit;
 }
 /*Footer*/
-.Work-Footer{
+.Home-Footer{
     grid-area: Work-Footer;
 }
+
 /*Tablet*/
 /*Tablet*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .Work-Container{
-        display: grid;
-        grid-template: 0.1fr 0.4fr repeat(3  ,0.5fr) repeat(2 , 0.2fr) /0.5fr  0.5fr;
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+    .Home-Container {
+        grid-template: 0.1fr 0.8fr 1fr repeat(2, 0.2fr) / repeat(2, auto);
         grid-template-areas:
     "Work-Header Work-Header"
-    "Work-Title Work-Title"
-    "Pic-1 Pic-2"
-    "Pic-3 Pic-4"
-    "Pic-5 Pic-6"
+    "Top-Title Top-Title"
+    "Box-1 Box-1"
     "Contact-Us Contact-Us"
     "Work-Footer Work-Footer";
     }
-    .Picture-1-Home {
-        width: 40vw;
+    .Work-Title{
+        width: 85%;
     }
-    .Picture-2-Home{
-        width: 40vw;
+    .Box-1{
+        width: 85%;
+        grid-template: repeat(3 , auto) / repeat(2,auto);
+        grid-template-areas:
+         "Pic-1 Pic-2"
+         "Pic-3 Pic-4"
+         "Pic-5 Pic-6";
     }
-    .Picture-3-Home{
-        width: 40vw;
+    .Contact-Us{
+        width: 85%;
     }
-    .Picture-4-Home{
-        width: 40vw;
-    }
-    .Picture-5-Home{
-        width: 40vw;
-    }
-    .Picture-6-Container{
-        width: 40vw;
-    }
-
-    /*h1{*/
-    /*    font-size: 41px;*/
-    /*    line-height: 50px;*/
-    /*    font-weight: 900;*/
-    /*}*/
-    /*h3{*/
-    /*    font-size: 27px;*/
-    /*    line-height: 28px;*/
-    /*    font-weight: 800;*/
-    /*}*/
 }
 
 /*Laptop*/
 /*Laptop*/
 
-@media screen and (min-width: 1025px){
-    .Work-Container{
-        display: grid;
-        grid-template: 0.1fr 0.4fr repeat(3  ,0.5fr) repeat(2 , 0.2fr) /0.5fr  0.5fr;
+@media screen and (min-width: 1001px){
+    .Home-Container {
+        grid-template: 0.1fr 0.5fr 1fr repeat(2, 0.2fr) / repeat(2, auto);
         grid-template-areas:
     "Work-Header Work-Header"
-    "Work-Title Work-Title"
-    "Pic-1 Pic-2"
-    "Pic-3 Pic-4"
-    "Pic-5 Pic-6"
+    "Top-Title Top-Title"
+    "Box-1 Box-1"
     "Contact-Us Contact-Us"
     "Work-Footer Work-Footer";
     }
-    .Picture-1-Home {
-        width: 40vw;
+    .Work-Title{
+        width: 80%;
     }
-    .Picture-2-Home{
-        width: 40vw;
+    .Work-Title h2{
+        width: 50%;
     }
-    .Picture-3-Home{
-        width: 40vw;
+    .Box-1{
+        width: 80%;
+        grid-template: repeat(3 , auto) / repeat(2,auto);
+        grid-template-areas:
+         "Pic-1 Pic-2"
+         "Pic-3 Pic-4"
+         "Pic-5 Pic-6";
     }
-    .Picture-4-Home{
-        width: 40vw;
+    .Contact-Us{
+        width: 80%;
     }
-    .Picture-5-Home{
-        width: 40vw;
+    .Contact-Us h2{
+        width: 50%;
     }
-    .Picture-6-Container{
-        width: 40vw;
-    }
-    /*h1{*/
-    /*    font-size: 51px;*/
-    /*}*/
-    /*h3{*/
-    /*    font-size: 29px;*/
-    /*}*/
 }
-
