@@ -2,14 +2,6 @@
     margin: 0;
     padding: 0;
 }
-@font-face {
-    font-family: "Encode Sans" , sans-serif;
-    src: url("../../../Element/Fonts/Encode Sans") format("woff2");
-}
-@font-face {
-    font-family: "Lora", sans-serif;
-    src: url("../../../Element/Fonts/Encode Sans") format("woff");
-}
 :root{
     --yellow-primary-color: #fff226;
     --yellow-secondary-color: #b8ad00;
@@ -20,33 +12,36 @@
     width: 100vw;
     height: 300vh;
     display: grid;
-    grid-template: 0.2fr 0.8fr repeat(5  ,0.25fr) 1fr repeat(6 , 0.2fr) / 1fr;
+    grid-gap: unset;
+    grid-template: 0.1fr 0.8fr 1.5fr repeat(3 , 0.2fr) / 1fr;
     grid-template-areas:
-    "Home-Header" "Top-Title" "Pic-1" "Pic-2" "Pic-3" "Pic-4" "Pic-5"
-    "Pic-6" "Offer" "Design" "Motion" "Strategy" "Contact-Us" "Home-Footer";
-    /*justify-content: space-between;*/
-    /*align-items: end;*/
+    "Home-Header" "Top-Title" "Box-1" "Offer" "Box-2" "Contact-Us" "Home-Footer";
     align-items: center;
-    /*align-content: stretch;*/
     justify-items: center;
 }
 /*Header*/
 .Header-Background{
     grid-area: Home-Header;
+    width: 80%;
 }
 /*Home-Title*/
 .Home-Title{
     grid-area: Top-Title;
     background-color: var(--yellow-primary-color);
     width:100%;
-    padding: 150px 0;
+    padding: 18% 0;
     display: flex;
     justify-content: center;
 }
 .Home-Title-Container{
-    /*padding: 0 100px;*/
     width: 80%;
-
+}
+.Home-Title-Container h1{
+    margin:2% 0;
+}
+.Home-Title-Container h3{
+    margin:1% 0;
+    color: var(--yellow-secondary-color);
 }
 /*Header-Button*/
 .Btn-Class{
@@ -54,8 +49,27 @@
     background-color: white;
     width:200px;
     height: 60px;
+    border-radius: 5px;
 }
 /*Pictures*/
+.Box-1{
+    display: grid;
+    grid-area: Box-1;
+    width: 80%;
+    grid-gap: 10px;
+    grid-template: repeat(6 , auto) / 1fr;
+    grid-template-areas:
+    "Pic-1" "Pic-2" "Pic-3" "Pic-4" "Pic-5" "Pic-6";
+    align-items: center;
+    justify-items: center;
+    margin-top: -15%;
+}
+.Box-1 a{
+    position: relative
+}
+.Picture-Container{
+    overflow: hidden;
+}
 .Picture-Container img{
     width: 100%;
     height: auto;
@@ -67,44 +81,41 @@
 .Picture{
     transition: all 0.2s;
 }
-.Picture-Container{
-    overflow: hidden;
-}
 .Picture-1-Home{
-    /*width: 80vw;*/
-    width: 80%;
     grid-area: Pic-1;
-    position: relative;
-    margin-top: -80px;
 }
 .Picture-2-Home{
-    width: 80%;
     grid-area: Pic-2;
-    position: relative;
 }
 .Picture-3-Home{
-    width: 80%;
     grid-area: Pic-3;
-    position: relative;
 }
 .Picture-4-Home{
-    width:  80%;
     grid-area: Pic-4;
-    position: relative;
 }
 .Picture-5-Home{
-    width:  80%;;
     grid-area: Pic-5;
-    position: relative;
 }
 .Picture-6-Container {
-    width:  80%;;
     grid-area: Pic-6;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6a.png");
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    width: 100%;
+    height: auto;
+    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6a.jpg");
 }
 /*Picture-BackGrounds*/
+.Picture-Bg-Special {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
 .Picture-Bg {
     position: absolute;
     top: 0;
@@ -118,7 +129,6 @@
 }
 .Picture-Bg-1{
     background-color: rgba(0,0,0,0.8);
-
 }
 .Picture-Bg-2{
     background-color: rgba(255,4,55,0.8);
@@ -149,46 +159,76 @@
 .Picture-Container:hover .Picture{
     transform: scale(1.1);
 }
-.Picture-6-Container:hover{
-    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6b.png");
+.Picture-Container:hover .Picture-Bg-Special{
+    opacity: 1;
+}
+.Picture-Container:hover .Picture-Special{
+    opacity: 0;
 }
 /*Offer*/
 .Offer {
     grid-area: Offer;
-    width: 80%;;
+    width: 80%;
+    margin: 5% 0;
 }
-.Offer h3{
+.Offer h4{
     color: var(--grey-color);
+    margin: 15px 0;
 }
 .Offer-Link{
     text-underline: black;
     color: inherit;
 }
-/*DMS*/
-.Design{
-    grid-area: Design;
-    width: 80%;
-
-}
-.Motion{
-    grid-area: Motion;
-    width: 80%;;
-}
-.Strategy{
-    grid-area: Strategy;
-    width:  80%;
+.Offer h2{
+    width: 70%;
 }
 /*Contact-US*/
 .Contact-Us{
     grid-area: Contact-Us;
-    width: 80vw;
+    width: 80%;
+    margin: 5% 0;
 }
-.Contact-Us h1{
+.Contact-Us h2{
     color: var(--yellow-tertiary-color);
 }
 .Contact-Us-link{
     text-underline: var(--yellow-tertiary-color);
     color: inherit;
+}
+.Contact-Us h2{
+    width: 70%;
+}
+/*#DMS*/
+.Box-2{
+    width: 80%;
+    display: grid;
+    grid-gap: 15px;
+    grid-area: Box-2;
+    grid-template: repeat(3 ,auto) / 1fr;
+    grid-template-areas:
+    "Design" "Motion" "Strategy";
+    align-items: center;
+    justify-items: center;
+}
+.Design{
+    grid-area: Design;
+}
+.Motion{
+    grid-area: Motion;
+}
+.Strategy{
+    grid-area: Strategy;
+}
+.DMS-Font h3{
+    color: var(--grey-color);
+    text-underline: var(--grey-color);
+    border-bottom: var(--grey-color) 5px solid;
+    display: inline;
+    margin: 5% 0;
+    padding: 5% 0;
+}
+.DMS-Font h5{
+    margin: 10% 0;
 }
 /*Footer*/
 .Home-Footer{
@@ -199,97 +239,73 @@
 /*Tablet*/
 @media screen and (min-width: 750px) and (max-width: 1000px) {
     .Home-Container {
-        width: 100vw;
-        display: grid;
-        grid-template: 0.1fr 0.4fr repeat(2, 0.25fr) repeat(4, 0.2fr) / repeat(3, 0.33fr);
+        grid-template: 0.1fr 0.4fr 1fr repeat(4, 0.2fr) / repeat(3, 0.33fr);
         grid-template-areas:
     "Home-Header Home-Header Home-Header"
     "Top-Title Top-Title Top-Title"
-    "Pic-1 Pic-2 Pic-3"
-    "Pic-4 Pic-5 Pic-6"
+    "Box-1 Box-1 Box-1"
     "Offer Offer Offer"
-    "Design Motion Strategy"
+    "Box-2 Box-2 Box-2 "
     "Contact-Us Contact-Us Contact-Us"
     "Home-Footer Home-Footer Home-Footer";
     }
-    .Picture-1-Home {
-        width: 25vw;
-        margin-top: -120px;
+    .Home-Title-Container{
+        width: 85%;
     }
-    .Picture-2-Home{
-        width: 25vw;
-        margin-top: -120px;
+    .Box-1{
+        width: 85%;
+        grid-template: repeat(2 , auto) / repeat(3,auto);
+        grid-template-areas:
+         "Pic-1 Pic-2 Pic-3" "Pic-4 Pic-5 Pic-6";
     }
-    .Picture-3-Home{
-        width: 25vw;
-        margin-top: -120px;
+    .Box-2{
+        width: 85%;
+        grid-template: 1fr / repeat(3,auto);
+        grid-template-areas:
+        "Design Motion Strategy";
     }
-    .Picture-4-Home{
-        width: 25vw;
+    .Offer{
+        width: 85%;
     }
-    .Picture-5-Home{
-        width: 25vw;
-    }
-    .Picture-6-Container{
-        width: 25vw;
-    }
-    .Design{
-        width:25vw;
-    }
-    .Motion{
-        width: 25vw;
-    }
-    .Strategy{
-        width: 25vw;
+    .Contact-Us{
+        width: 85%;
     }
 }
 
 /*Laptop*/
 /*Laptop*/
 
-@media screen and (min-width: 1025px){
+@media screen and (min-width: 1001px){
     .Home-Container {
-        width: 100vw;
-        display: grid;
-        grid-template: 0.1fr 0.8fr repeat(2, 0.25fr) repeat(4, 0.2fr) / repeat(3, 33fr);
+        grid-template: 0.1fr 0.8fr 1fr repeat(4, 0.2fr) / repeat(3, 0.33fr);
         grid-template-areas:
     "Home-Header Home-Header Home-Header"
     "Top-Title Top-Title Top-Title"
-    "Pic-1 Pic-2 Pic-3"
-    "Pic-4 Pic-5 Pic-6"
+    "Box-1 Box-1 Box-1"
     "Offer Offer Offer"
-    "Design Motion Strategy"
+    "Box-2 Box-2 Box-2 "
     "Contact-Us Contact-Us Contact-Us"
     "Home-Footer Home-Footer Home-Footer";
     }
-    .Picture-1-Home {
-        width: 25vw;
-        margin-top: -120px;
+    .Box-1{
+        width: 70%;
+        grid-template: repeat(2 , auto) / repeat(3,auto);
+        grid-template-areas:
+         "Pic-1 Pic-2 Pic-3" "Pic-4 Pic-5 Pic-6";
     }
-    .Picture-2-Home{
-        width: 25vw;
-        margin-top: -120px;
+    .Box-2{
+        width: 70%;
+        grid-template: 1fr / repeat(3,auto);
+        grid-template-areas:
+        "Design Motion Strategy";
     }
-    .Picture-3-Home{
-        width: 25vw;
-        margin-top: -120px;
+    .Home-Title-Container{
+        width: 70%;
     }
-    .Picture-4-Home{
-        width: 25vw;
+    .Offer{
+        width: 70%;
     }
-    .Picture-5-Home{
-        width: 25vw;
-    }
-    .Picture-6-Container{
-        width: 25vw;
-    }
-    .Design{
-        width:25vw;
-    }
-    .Motion{
-        width: 25vw;
-    }
-    .Strategy{
-        width: 25vw;
+    .Contact-Us{
+        width: 70%;
     }
 }
