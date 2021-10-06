@@ -22,7 +22,6 @@
 /*Header*/
 .Header-Background{
     grid-area: Home-Header;
-    width: 100%;
 }
 /*Home-Title*/
 .Home-Title{
@@ -62,7 +61,7 @@
     "Pic-1" "Pic-2" "Pic-3" "Pic-4" "Pic-5" "Pic-6";
     align-items: center;
     justify-items: center;
-    margin-top: -15%;
+    margin-top: -80px;
 }
 .Box-1 a{
     position: relative
@@ -239,7 +238,7 @@
 /*Tablet*/
 @media screen and (min-width: 750px) and (max-width: 1000px) {
     .Home-Container {
-        grid-template: 0.1fr 0.4fr 1fr repeat(4, 0.2fr) / repeat(3, 0.33fr);
+        grid-template: 0.1fr 0.8fr 0.5fr repeat(4, 0.2fr) / repeat(3, 0.33fr);
         grid-template-areas:
     "Home-Header Home-Header Home-Header"
     "Top-Title Top-Title Top-Title"
@@ -257,6 +256,7 @@
         grid-template: repeat(2 , auto) / repeat(3,auto);
         grid-template-areas:
          "Pic-1 Pic-2 Pic-3" "Pic-4 Pic-5 Pic-6";
+        margin-top: -250px;
     }
     .Box-2{
         width: 85%;
@@ -277,7 +277,7 @@
 
 @media screen and (min-width: 1001px){
     .Home-Container {
-        grid-template: 0.1fr 0.8fr 1fr repeat(4, 0.2fr) / repeat(3, 0.33fr);
+        grid-template: 0.1fr 0.8fr 0.5fr repeat(4, 0.2fr) / repeat(3, 0.33fr);
         grid-template-areas:
     "Home-Header Home-Header Home-Header"
     "Top-Title Top-Title Top-Title"
@@ -292,6 +292,7 @@
         grid-template: repeat(2 , auto) / repeat(3,auto);
         grid-template-areas:
          "Pic-1 Pic-2 Pic-3" "Pic-4 Pic-5 Pic-6";
+        margin-top: -180px;
     }
     .Box-2{
         width: 70%;

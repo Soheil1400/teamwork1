@@ -20,12 +20,11 @@
     justify-items: center;
 }
 /*Header*/
-.Header-Background{
+.Header-Background {
     grid-area: Work-Header;
-    width: 80%;
 }
-/*Home-Title*/
-.Work-Title-Title{
+/*Work-Title*/
+.Work-Title{
     grid-area: Top-Title;
     width:80%;
 }
