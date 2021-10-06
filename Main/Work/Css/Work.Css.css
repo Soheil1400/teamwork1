@@ -22,6 +22,8 @@
 /*Header*/
 .Header-Background {
     grid-area: Work-Header;
+    width: 100%;
+    z-index: 999;
 }
 /*Work-Title*/
 .Work-Title{

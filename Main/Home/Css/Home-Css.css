@@ -22,6 +22,8 @@
 /*Header*/
 .Header-Background{
     grid-area: Home-Header;
+    width: 100%;
+    z-index: 999;
 }
 /*Home-Title*/
 .Home-Title{
@@ -256,7 +258,7 @@
         grid-template: repeat(2 , auto) / repeat(3,auto);
         grid-template-areas:
          "Pic-1 Pic-2 Pic-3" "Pic-4 Pic-5 Pic-6";
-        margin-top: -250px;
+        margin-top: -200px;
     }
     .Box-2{
         width: 85%;
