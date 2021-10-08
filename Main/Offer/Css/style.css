@@ -1,9 +1,13 @@
-html{
+@import "../../Home/Css/footer.css";
+@import "../../General/Css/General-Css.css";
+
+html {
     font-size: 10px;
 }
-:root{
+
+:root {
     --grey-color: #CCCCCC;
-    --yellow-color:#f2e400
+    --yellow-color: #f2e400
 }
 
 
@@ -11,7 +15,7 @@ html{
     height: 100vh;
     display: grid;
     grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr;
-    grid-gap: 10px ;
+    grid-gap: 10px;
     grid-template-areas: 'header '
                          'content--design'
                          'content--motion'
@@ -25,81 +29,85 @@ html{
     grid-area: header;
     margin: 5%;
 }
-.footer-explain{
-    color:var(--yellow-color);
+
+.footer-explain {
+    color: var(--yellow-color);
 }
+
 h2 {
     font-size: 30px;
     line-height: 33px;
     font-weight: 800;
 }
+
 h3 {
     font-size: 24px;
     line-height: 24px;
     color: var(--grey-color);
 }
-p{
+
+p {
     font-size: 14px;
     line-height: 26px;
 }
 
 .content--design {
-    grid-area:content--design ;
+    grid-area: content--design;
     width: 95%;
     margin: 3rem auto;
 }
 
-.image--design{
+.image--design {
 
 }
 
-.properti--design{
+.properti--design {
     width: 90%;
 }
-
 
 
 .content--motion {
-    grid-area:content--motion ;
+    grid-area: content--motion;
     width: 95%;
     margin: 3rem auto;
 }
 
-.image--motion{
+.image--motion {
 
 }
 
-.properti--motion{
+.properti--motion {
     width: 90%;
 }
-
 
 
 .content--strategy {
-    grid-area:content--strategy ;
+    grid-area: content--strategy;
     width: 95%;
     margin: 3rem auto;
 }
 
-.image--strategy{
+.image--strategy {
 
 }
 
-.properti--strategy{
+.properti--strategy {
     width: 90%;
 }
 
 
-@media only screen and (min-width: 1450px){
+@media only screen and (min-width: 1450px) {
     h2 {
         font-size: 60px;
         line-height: 62px;
     }
+
     h3 {
         font-size: 38px;
         line-height: 42px;
     }
-    p{
+
+    p {
         font-size: 26px;
         line-height: 30px;
     }
@@ -108,7 +116,8 @@ p{
     .content--design {
         display: flex;
     }
-    .properti--design{
+
+    .properti--design {
         width: 60rem;
         box-sizing: border-box;
         margin-left: 20%;
@@ -118,18 +127,19 @@ p{
     .content--motion {
         display: flex;
     }
-    .properti--motion{
+
+    .properti--motion {
         width: 60rem;
         box-sizing: border-box;
         margin-left: 20%;
     }
 
 
-
     .content--strategy {
         display: flex;
     }
-    .properti--strategy{
+
+    .properti--strategy {
         width: 60rem;
         box-sizing: border-box;
         margin-left: 20%;
@@ -137,17 +147,18 @@ p{
 }
 
 
-
-@media only screen and (min-width: 1000px) and (max-width: 1449px){
+@media only screen and (min-width: 1000px) and (max-width: 1449px) {
     h2 {
         font-size: 42px;
         line-height: 40px;
     }
+
     h3 {
         font-size: 28px;
         line-height: 30px;
     }
-    p{
+
+    p {
         font-size: 15px;
         line-height: 28px;
     }
@@ -157,7 +168,8 @@ p{
         display: flex;
         justify-content: space-between;
     }
-    .properti--design{
+
+    .properti--design {
         width: 55rem;
         box-sizing: border-box;
         margin-left: 15%;
@@ -167,18 +179,19 @@ p{
     .content--motion {
         display: flex;
     }
-    .properti--motion{
+
+    .properti--motion {
         width: 55rem;
         box-sizing: border-box;
         margin-left: 15%;
     }
 
 
-
     .content--strategy {
         display: flex;
     }
-    .properti--strategy{
+
+    .properti--strategy {
         width: 55rem;
         box-sizing: border-box;
         margin-left: 15%;
@@ -186,17 +199,18 @@ p{
 }
 
 
-
-@media only screen and (min-width: 750px) and (max-width: 999px){
+@media only screen and (min-width: 750px) and (max-width: 999px) {
     h2 {
         font-size: 33px;
         line-height: 38px;
     }
+
     h3 {
         font-size: 26px;
         line-height: 28px;
     }
-    p{
+
+    p {
         font-size: 14px;
     }
 
@@ -204,7 +218,8 @@ p{
     .content--design {
         display: flex;
     }
-    .properti--design{
+
+    .properti--design {
         width: 80%;
         box-sizing: border-box;
         margin-left: 5%;
@@ -214,18 +229,19 @@ p{
     .content--motion {
         display: flex;
     }
-    .properti--motion{
+
+    .properti--motion {
         width: 80%;
         box-sizing: border-box;
         margin-left: 5%;
     }
 
 
-
     .content--strategy {
         display: flex;
     }
-    .properti--strategy{
+
+    .properti--strategy {
         width: 80%;
         box-sizing: border-box;
         margin-left: 5%;

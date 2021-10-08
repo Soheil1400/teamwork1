@@ -1,3 +1,6 @@
+@import "../../Home/Css/footer.css";
+@import "../../General/Css/General-Css.css";
+
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +18,7 @@
     grid-gap: unset;
     grid-template: 0.1fr 0.8fr 1.5fr repeat(3 , 0.2fr) / 1fr;
     grid-template-areas:
-    "Home-Header" "Top-Title" "Box-1" "Offer" "Box-2" "Contact-Us" "Home-Footer";
+    "Home-Header" "Top-Title" "Box-1" "Offer" "Box-2" "Contact-Us" "footer";
     align-items: center;
     justify-items: center;
 }
@@ -103,7 +106,7 @@
     /*background-repeat: no-repeat;*/
     width: 100%;
     height: auto;
-    background-image: url("../../../Element/Img/simple2-home-portfolio-project-6a.jpg");
+    background-image: url("../Img/simple2-home-portfolio-project-6a.jpg");
 }
 /*Picture-BackGrounds*/
 .Picture-Bg-Special {
@@ -231,10 +234,6 @@
 .DMS-Font h5{
     margin: 10% 0;
 }
-/*Footer*/
-.Home-Footer{
-    grid-area: Home-Footer;
-}
 
 /*Tablet*/
 /*Tablet*/
@@ -248,7 +247,7 @@
     "Offer Offer Offer"
     "Box-2 Box-2 Box-2 "
     "Contact-Us Contact-Us Contact-Us"
-    "Home-Footer Home-Footer Home-Footer";
+    "footer footer footer";
     }
     .Home-Title-Container{
         width: 85%;
@@ -287,7 +286,7 @@
     "Offer Offer Offer"
     "Box-2 Box-2 Box-2 "
     "Contact-Us Contact-Us Contact-Us"
-    "Home-Footer Home-Footer Home-Footer";
+    "footer footer footer";
     }
     .Box-1{
         width: 70%;

@@ -1,3 +1,6 @@
+@import "../../Home/Css/footer.css";
+@import "../../General/Css/General-Css.css";
+
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +18,7 @@
     grid-gap: 5%;
     grid-template: 0.1fr 0.8fr 1.5fr repeat(2 , 0.2fr) / 1fr;
     grid-template-areas:
-    "Work-Header" "Top-Title" "Box-1" "Contact-Us" "Work-Footer";
+    "Work-Header" "Top-Title" "Box-1" "Contact-Us" "footer";
     align-items: center;
     justify-items: center;
 }
@@ -160,10 +163,6 @@
     text-underline: var(--yellow-tertiary-color);
     color: inherit;
 }
-/*Footer*/
-.Home-Footer{
-    grid-area: Work-Footer;
-}
 
 /*Tablet*/
 /*Tablet*/
@@ -175,7 +174,7 @@
     "Top-Title Top-Title"
     "Box-1 Box-1"
     "Contact-Us Contact-Us"
-    "Work-Footer Work-Footer";
+    "footer footer";
     }
     .Work-Title{
         width: 85%;
@@ -204,7 +203,7 @@
     "Top-Title Top-Title"
     "Box-1 Box-1"
     "Contact-Us Contact-Us"
-    "Work-Footer Work-Footer";
+    "footer footer";
     }
     .Work-Title{
         width: 80%;

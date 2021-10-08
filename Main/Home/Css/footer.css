@@ -1,0 +1,137 @@
+.footer {
+    grid-area: footer;
+    width: 85%;
+}
+
+.contactus--style {
+    font-family: Encode Sans, sans-serif;
+    font-size: 1.3rem;
+    line-height: 41px;
+    color: var(--yellow-secondary-color);
+    letter-spacing: 0;
+    margin-top: 4rem;
+}
+
+.contactus--style a {
+    outline: 0;
+    color: var(--yellow-secondary-color);
+    margin: 0;
+}
+
+.footer2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.small--logo {
+    margin-bottom: 110px;
+    margin-top: 120px;
+}
+
+.small--logoSub {
+    margin-bottom: 40px;
+}
+
+.footer--dec {
+    margin-bottom: 100px;
+}
+
+.arrow--up {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.arrow--up a {
+
+}
+
+.footer--end {
+    text-align: center;
+}
+
+.color--Fyellow {
+    color: #fff226;
+}
+
+@media only screen and (min-width: 1000px) {
+    .footer1 {
+        width: 70%;
+    }
+
+    .contactus--style {
+        font-size: 1.9rem;
+        font-weight: bolder;
+        line-height: 3rem;
+    }
+
+    .footer2 {
+        flex-direction: row;
+        margin: 9rem 0;
+    }
+
+    .footer3 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .small--logo {
+        margin: 0;
+        width: 50%;
+    }
+
+    .small--logoSub {
+        margin-bottom: 0;
+        width: 25%;
+    }
+
+    .footer--dec {
+        margin-bottom: 0;
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1000px) {
+
+    .footer1 {
+        width: 80%;
+    }
+
+    .contactus--style {
+        font-size: 1.6rem;
+        font-weight: bolder;
+        line-height: 3rem;
+    }
+
+    .footer2 {
+        flex-direction: row;
+        margin: 9rem 0;
+    }
+
+    .footer3 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .small--logo {
+        margin: 0;
+        width: 50%;
+    }
+
+    .small--logoSub {
+        margin-bottom: 0;
+        width: 25%;
+    }
+
+    .footer--dec {
+        margin-bottom: 0;
+        width: 25%;
+    }
+}
