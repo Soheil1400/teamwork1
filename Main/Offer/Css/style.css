@@ -2,6 +2,12 @@
 @import "../../General/Css/General-Css.css";
 @import "../../Home/Css/Header-Css.css";
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
 .main-offer {
     height: 100vh;
     display: grid;
