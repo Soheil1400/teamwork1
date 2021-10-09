@@ -19,9 +19,8 @@ html {
     display: grid;
     margin: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr 2fr 3fr 2fr 2fr;
+    grid-template-rows:  1fr 2fr 3fr 2fr 2fr;
     grid-template-areas:
-            "header"
             "about--title"
             "about--img"
             "about--story"
@@ -30,11 +29,6 @@ html {
     align-items: center;
     justify-items: center;
 }
-
-.header {
-    grid-area: header;
-}
-
 .about__title {
     grid-area: about--title;
     width: 85%;
@@ -118,9 +112,8 @@ html {
     .container {
         height: 150vh;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 2fr 3fr  2fr 2fr 3fr;
+        grid-template-rows: 2fr 3fr  2fr 2fr 3fr;
         grid-template-areas:
-            "header header"
             "about--title about--title"
             "about--img about--img"
             "about--story about--story"
@@ -182,9 +175,8 @@ html {
     .container {
         height: 150vh;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 2fr 3fr 5fr 2fr 4fr;
+        grid-template-rows: 2fr 3fr 5fr 2fr 4fr;
         grid-template-areas:
-            "header header"
             "about--title about--title"
             "about--img about--img"
             "about--story about--story"
