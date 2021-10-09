@@ -5,11 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About-page</title>
     <link rel="stylesheet" href="../Css/about-css.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-<div class="container">
-    <div class="header">
+<div class="Header-Background">
+    <div class="Header-Home">
+        <div class="Header-Home-Logo">
+            <a href="Home.html">
+                <img src="../../Home/Img/simple2.png" alt="header">
+            </a>
+            <i class="material-icons" onclick="showMenu()">reorder</i>
+        </div>
+        <nav id="navList" >
+            <ul>
+                <li>
+                    <a href="Home.html"><span>Home</span></a>
+                </li>
+                <li>
+                    <a href="../../Work/Html/Work.html"><span>Work</span></a>
+                </li>
+                <li>
+                    <a href="../../Offer/Html/Offer.html"><span>Offer</span></a>
+                </li>
+                <li>
+                    <a href="../../About/Html/About.html"><span style="color: var(--grey-color)">About</span></a>
+                </li>
+                <li>
+                    <a href="../../Contact/Html/Contact.html"><span>Contact</span></a>
+                </li>
+                <li>
+                    <a href="Home.html"><span>Buy now</span></a>
+                </li>
+            </ul>
+        </nav>
     </div>
+</div>
+<div class="container">
     <div class="about__title max">
         <div>
             <div>
@@ -128,5 +159,6 @@
         </div>
     </div>
 </div>
+<script src="../../Home/Js/Header.js"></script>
 </body>
 </html>
