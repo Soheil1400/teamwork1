@@ -2,67 +2,199 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <link rel="stylesheet" href="../css/skin-contact.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="../../Home/Css/Header-Css.css" rel="stylesheet">
 </head>
 <body>
-<h1><b>Let's have <br> a chat</b></h1>
-<h2>Contact us</h2>
-<div class="container">
-
-    <div class="address-logo">
-        <span class="iconify" data-icon="cil:location-pin" style="color: gray;" data-width="60"></span>
+<script src="../../Home/Js/Header.js"></script>
+<div class="home__container">
+    <div class="Header-Background">
+        <div class="Header-Home">
+            <div class="Header-Home-Logo">
+                <a href="/">
+                    <img src="../../Home/Img/simple2.png" alt="header">
+                </a>
+                <i class="material-icons" onclick="showMenu()">reorder</i>
+            </div>
+            <nav id="navList" >
+                <ul>
+                    <li>
+                        <a href="Home.html"><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a href="../../Work/Html/Work.html"><span>Work</span></a>
+                    </li>
+                    <li>
+                        <a href="../../Offer/Html/Offer.html"><span>Offer</span></a>
+                    </li>
+                    <li>
+                        <a href="../../About/Html/About.html"><span>About</span></a>
+                    </li>
+                    <li>
+                        <a href="../../Contact/Html/Contact.html"><span>Contact</span></a>
+                    </li>
+                    <li>
+                        <a href="Home.html"><span>Buy now</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="contact--title">
+        <div class="title--dec">
+            <h1>
+                Let's have<br>
+                a chat.
+            </h1>
+        </div>
+        <div class="title--style">
+            <h3>
+                Contact us
+            </h3>
+        </div>
     </div>
     <div class="address">
-        <hr class="hr">
-        <h3>Address</h3>
-        <p>Envato
-            Level 13, 2 Elizabeth<br>
-            Victoria 3000<br>
-            Australia</p>
-    </div>
-
-    <div class="talk-logo">
-        <span class="iconify" data-icon="clarity:talk-bubbles-line" style="color: gray;" data-width="60"></span>
-    </div>
-    <div class="talk">
-        <hr class="hr">
-        <h3>Let's talk</h3>
-        <p>+61 (0) 3 8376 6284<br>
-            noreply@envato.com</p>
-    </div>
-
-
-</div>
-<div class="main-form">
-    <form>
-        <div class="form-group col-md-10">
-            <input type="text" class="form-control" id="Name" placeholder="Name">
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <input type="email" class="form-control" id="Email" placeholder="Email">
+        <div class="address--img">
+            <div>
+                <img src="../img/simple2-map-marker-icon.png" alt="map">
             </div>
-            <div class="form-group col-md-4">
+        </div>
+        <div class="address--dec">
+            <div style="margin-bottom: 25px">
+                <h2>
+                    Address
+                </h2>
+            </div>
+            <div>
+                <p>Envato<br>
+                    Level 13, 2 Elizabeth<br>
+                    Victoria 3000</br>
+                    Australia
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="null-address"></div>
+    <div class="talk">
+        <div class="talk--img">
+            <div>
+                <img src="../img/simple2-chat-icon.png" alt="map">
+            </div>
+        </div>
+        <div class="talk--dec">
+            <div style="margin-bottom: 25px">
+                <h2>
+                    Let's talk
+                </h2>
+            </div>
+            <div>
+                <p>+61 (0) 3 8376 6284<br>
+                    noreply@envato.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="null-talk"></div>
+    <div class="contact--form">
+        <form class="main-form">
+            <div class="form-group">
+                <input type="text" class="form-control" id="Name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <input type="Email" class="form-control" id="Email" placeholder="Email">
+            </div>
+            <div class="form-group">
                 <input type="text" class="form-control" id="Subject" placeholder="Subject">
             </div>
-        </div>
-        <div class="form-group col-md-8" >
-            <input type="text" class="form-control" id="Detail" placeholder="Details">
-        </div>
-        <div class="form-group col-md-8">
-            <textarea class="form-control" id="Message" rows="10" placeholder="Your Message"></textarea>
-        </div>
-        <div class="col-md-8">
-            <button class="btn-send" type="submit" style="">Send</button>
-        </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="Detail" placeholder="Detail">
+            </div>
 
-    </form>
+            <div class="form-group">
+                <textarea style="background-color: #fafafa" class="form-control" id="message" rows="8" placeholder="Your message"></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+        <form class="responsive">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div class="col">
+                    <input type="Email" class="form-control" placeholder="Email">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control"  placeholder="Subject">
+                </div>
+            </div>
 
+            <div class="form-group" style="margin-top: 10px">
+                <input type="text" class="form-control"  placeholder="Detail">
+            </div>
+
+            <div class="form-group">
+                <textarea style="background-color: #fafafa" class="form-control"  rows="8" placeholder="Your message"></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <div class="footer max">
+        <div class="footer1">
+            <div class="contactus--style">
+                <h2>
+                    Enim ad mllo invento incid<br>
+                    <a href="#">
+                        Contact us
+                    </a>
+                </h2>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="small--logo">
+                <img src="../../Home/Img/Be.png" alt="Be">
+            </div>
+            <div class="small--logoSub">
+                <p>
+                    Quis dolorum mollitia,
+                </p>
+                <p>
+                    vero minus. Quod,
+                </p>
+                <p>
+                    facilis impedit.
+                </p>
+            </div>
+            <div class="footer--dec">
+                <p>
+                    <b>Quos obcaecati voluptatem sunt</b> esse blanditiis voluptas voluptates aperiam aliquam culpa,
+                    dignissimos eius quaerat.
+                </p>
+            </div>
+        </div>
+        <div class="footer3">
+            <div class="arrow--up">
+                <a href="#">
+                    <img src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/000000/external-up-arrows-those-icons-lineal-those-icons.png"
+                         alt="up">
+                </a>
+            </div>
+            <div class="footer--end">
+                <p>
+                    © 2021 Betheme by <span class="color--Fyellow">Muffin group</span> | All Rights Reserved | Powered
+                    by
+                    <span class="color--Fyellow">WordPress</span>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
-<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
