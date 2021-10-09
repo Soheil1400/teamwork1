@@ -2,12 +2,12 @@
 @import "/Element/Fonts/font.css";
 @import "/Element/color/color.css";
 @import "../../General/Css/General-Css.css";
-/*@media screen and (max-width: 900px){*/
     * {
         margin: 0;
     }
 
     .home__container {
+        justify-content: center;
         width: 70vw;
         height: 200vh;
         margin: auto;
@@ -147,12 +147,7 @@
     .responsive{
         display: none;
     }
-/*}*/
-
 @media only screen and (min-width: 1000px) {
-    * {
-        margin: 0;
-    }
     .home__container {
         width: 80vw;
         height: 300vh;
