@@ -7,7 +7,6 @@
     padding: 0;
 }
 
-
 .main-offer {
     height: 100vh;
     display: grid;
@@ -147,7 +146,7 @@ p {
 }
 
 
-@media only screen and (min-width: 1000px) and (max-width: 1449px) {
+@media only screen and (min-width: 1000px) {
     h2 {
         font-size: var(--verylarge-fontsize);
         line-height: 42px;
