@@ -99,7 +99,7 @@ i{
     .Header-Home nav {
         width: auto;
         margin: 0;
-        display: block;
+        display: block!important;
     }
 
     .Header-Home li {
