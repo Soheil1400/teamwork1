@@ -1,14 +1,14 @@
+/*General*/
 @import "../../General/Css/footer.css";
 @import "../../General/Css/General-Css.css";
 @import "../../General/Css/Header-Css.css";
 @import "../../General/Css/Font-Css.css";
-
 .Work-Container{
     width: 100%;
     height: 200vh;
     display: grid;
     grid-gap: 80px;
-    grid-template: 0.1fr 0.2fr 1.5fr 0.2fr / 1fr;
+    grid-template: 1fr 2fr 3fr 2fr / 1fr;
     grid-template-areas:
     "Work-Header" "Top-Title" "Box-1" "footer";
     align-items: center;
@@ -24,10 +24,9 @@
 .Work-Title{
     grid-area: Top-Title;
     width:85%;
-    padding: 30px 0;
 }
 .Work-Title-Container h2{
-    width: 90%;
+    width: 87%;
 }
 .Work-Title-Container h3{
     color: var(--grey-color);
@@ -121,7 +120,7 @@
 /*Picture-Text*/
 .Picture-text{
     color: white;
-    font-size: 35px;
+    font-size: 110%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -132,7 +131,6 @@
 .Picture-Container:hover .Picture-Bg{
     opacity: 0.7;
 }
-
 .Picture-Container:hover .Picture{
     transform: scale(1.15);
 }
@@ -142,12 +140,15 @@
 .Picture-Container:hover .Picture-Special{
     opacity: 0;
 }
-/*Tablet*/
+/*Footer*/
+.footer{
+    width:85%;
+}
 /*Tablet*/
 @media screen and (min-width: 750px) and (max-width: 1023px) {
     .Home-Container {
-        height: 150vh;
-        grid-template: 0.1fr 0.5fr 1fr 0.2fr / repeat(2, auto);;
+        height: 130vh;
+        grid-template: 1fr 1.5fr 1.5fr 1fr / repeat(2, auto);
         grid-template-areas:
     "Work-Header Work-Header"
     "Top-Title Top-Title"
@@ -156,6 +157,9 @@
     }
     .Work-Title{
         width: 85%;
+    }
+    .Work-Container h2{
+        width: 70%;
     }
     .Box-1{
         width: 85%;
@@ -166,14 +170,15 @@
          "Pic-3 Pic-4"
          "Pic-5 Pic-6";
     }
+    .footer{
+        width: 85%;
+    }
 }
 
 /*Laptop*/
-/*Laptop*/
-
 @media screen and (min-width: 1024px) and (max-width: 1439px){
     .Home-Container {
-        grid-template: 0.1fr 0.5fr 1fr 0.2fr / repeat(2, auto);
+        grid-template: 1fr 1.5fr 1.5fr 1fr / repeat(2, auto);
         grid-template-areas:
     "Work-Header Work-Header"
     "Top-Title Top-Title"
@@ -182,6 +187,9 @@
     }
     .Work-Title{
         width: 90%;
+    }
+    .Work-Container h2{
+        width: 47%;
     }
     .Box-1{
         width: 90%;
@@ -192,7 +200,11 @@
          "Pic-3 Pic-4"
          "Pic-5 Pic-6";
     }
+    .footer{
+        width: 90%;
+    }
 }
+/*Laptop-2*/
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
     .Home-Container {
         grid-template: 0.1fr 0.5fr 1fr 0.2fr / repeat(2, auto);
@@ -202,11 +214,12 @@
     "Box-1 Box-1"
     "footer footer";
     }
-
     .Work-Title {
         width: 70%;
     }
-
+    .Work-Container h2{
+        width: 39%;
+    }
     .Box-1 {
         width: 70%;
         grid-gap: 40px;
@@ -216,8 +229,12 @@
          "Pic-3 Pic-4"
          "Pic-5 Pic-6";
     }
+    .footer{
+        width: 70%;
+    }
 }
-@media screen and (min-width: 2561px){
+/*4K*/
+@media screen and (min-width: 2560px){
     .Home-Container {
         grid-template: 0.1fr 0.5fr 1fr 0.2fr / repeat(2, auto);
         grid-template-areas:
@@ -227,16 +244,19 @@
     "footer footer";
     }
     .Work-Title{
-        width: 50%;
+        width: 40%;
     }
     .Box-1{
-        width: 50%;
-        grid-gap: 40px;
+        width: 40%;
+        grid-gap: 20px;
         grid-template: repeat(3 , auto) / repeat(2,auto);
         grid-template-areas:
          "Pic-1 Pic-2"
          "Pic-3 Pic-4"
          "Pic-5 Pic-6";
+    }
+    .footer{
+        width: 40%;
     }
 }
 
