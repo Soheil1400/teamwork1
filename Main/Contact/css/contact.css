@@ -1,11 +1,13 @@
-@import "../../Home/Css/footer.css";
+@import "../../General/Css/footer.css";
 @import "/Element/Fonts/font.css";
 @import "/Element/color/color.css";
 @import "../../General/Css/General-Css.css";
     * {
         margin: 0;
     }
-
+    html{
+        scroll-behavior: smooth;
+    }
     .home__container {
         justify-content: center;
         width: 70vw;
@@ -26,15 +28,9 @@
     .Header-Background {
         grid-area: header;
     }
-    .null-address{
-        display: grid;
-        grid-area: null-address;
-    }
-    .null-talk{
-        display: grid;
-        grid-area: null-talk;
-    }
     .talk{
+        margin-left: 10%;
+        margin-bottom: 30%;
         display: grid;
         grid-area: talk;
         grid-template-columns: 1fr 2fr;
@@ -42,6 +38,8 @@
         grid-template-areas: "talk-image talk-description" ;
     }
     .address{
+        margin-left: 10%;
+        margin-bottom: 20%;
         display: grid;
         grid-area: address;
         grid-template-columns: 1fr 2fr;
@@ -49,33 +47,46 @@
         grid-template-areas: "address-image address-description" ;
     }
     .contact--title {
+        margin-top: 20%;
         grid-area: contact--title;
         background: #fff;
-        font-family: "Encode Sans", sans-serif;
+        font-family: "Encode Sans Expanded",Helvetica,Arial,sans-serif;
         width: 100%;
         height: auto;
-        line-height: 10px;
         display: flex;
         flex-direction: column;
         align-content: center;
         justify-content: center;
     }
+    .title--dec{
+        font-weight: 900;
+        font-family: "Encode Sans Expanded",Helvetica,Arial,sans-serif;
+        font-size: 34px;
+        line-height: 19px;
+    }
     .title--style {
+
+        margin-bottom: 30%;
         color: var(--grey-color);
-        font-family: "Encode Sans", sans-serif;
-        line-height: 50px;
+        font-family: "Encode Sans Expanded",Helvetica,Arial,sans-serif;
+        line-height: 33px;
+        font-size: 21px;
     }
     .address--img {
         grid-area: address-image;
-        /*margin-left: 25px;*/
         top: 0;
         transition: 0.5s;
     }
 
     .address--dec {
+        margin-left: 10%;
+        font-size: 12px;
+        font-weight: 19;
+        text-align: left;
         grid-area: address-description;
         align-content: flex-start;
         justify-content: flex-start;
+        font-family: "Lucida Sans",Helvetica,sans-serif;
     }
     .address:hover .address--img{
         transform: translateY(-5px);
@@ -116,7 +127,11 @@
         height: 63px;
     }
     .talk--dec {
+        font-size: 12px;
+        font-weight: 19;
+        text-align: left;
         grid-area: talk-description;
+        font-family: "Lucida Sans",Helvetica,sans-serif;
     }
     button {
         background-color: #cccccc;
