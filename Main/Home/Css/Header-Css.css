@@ -6,6 +6,7 @@
     background-color: white;
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 .Header-Home {
@@ -81,7 +82,8 @@
 
 @media only screen and (min-width: 1000px) {
     .Header-Home {
-        width: 75%;
+        width: 85%;
+        max-width: 1000px;
         margin: auto;
         display: flex;
         justify-content: space-between;
