@@ -1,24 +1,16 @@
-@import "../../Home/Css/footer.css";
+@import "../../General/Css/footer.css";
 @import "../../General/Css/General-Css.css";
+@import "../../General/Css/Header-Css.css";
+@import "../../General/Css/Font-Css.css";
 
-*{
-    margin: 0;
-    padding: 0;
-}
-:root{
-    --yellow-primary-color: #fff226;
-    --yellow-secondary-color: #b8ad00;
-    --yellow-tertiary-color: #f2e400;
-    --grey-color: #cccccc;
-}
 .Work-Container{
     width: 100%;
     height: 300vh;
     display: grid;
     grid-gap: 5%;
-    grid-template: 0.1fr 0.8fr 1.5fr repeat(2 , 0.2fr) / 1fr;
+    grid-template: 0.1fr 0.8fr 1.5fr 0.2fr / 1fr;
     grid-template-areas:
-    "Work-Header" "Top-Title" "Box-1" "Contact-Us" "footer";
+    "Work-Header" "Top-Title" "Box-1" "footer";
     align-items: center;
     justify-items: center;
 }
@@ -141,7 +133,7 @@
 }
 
 .Picture-Container:hover .Picture{
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 .Picture-Container:hover .Picture-Bg-Special{
     opacity: 1;
@@ -149,31 +141,15 @@
 .Picture-Container:hover .Picture-Special{
     opacity: 0;
 }
-
-/*Contact-US*/
-.Contact-Us {
-    grid-area: Contact-Us;
-    width: 80%;
-}
-.Contact-Us h2{
-    color: var(--yellow-tertiary-color);
-    width: 60%;
-}
-.Contact-Us-link{
-    text-underline: var(--yellow-tertiary-color);
-    color: inherit;
-}
-
 /*Tablet*/
 /*Tablet*/
 @media screen and (min-width: 750px) and (max-width: 1000px) {
     .Home-Container {
-        grid-template: 0.1fr 0.8fr 1fr repeat(2, 0.2fr) / repeat(2, auto);
+        grid-template: 0.1fr 0.8fr 1fr 0.2fr / repeat(2, auto);
         grid-template-areas:
     "Work-Header Work-Header"
     "Top-Title Top-Title"
     "Box-1 Box-1"
-    "Contact-Us Contact-Us"
     "footer footer";
     }
     .Work-Title{
@@ -197,12 +173,11 @@
 
 @media screen and (min-width: 1001px){
     .Home-Container {
-        grid-template: 0.1fr 0.5fr 1fr repeat(2, 0.2fr) / repeat(2, auto);
+        grid-template: 0.1fr 0.5fr 1fr repeat(1, 0.2fr) / repeat(2, auto);
         grid-template-areas:
     "Work-Header Work-Header"
     "Top-Title Top-Title"
     "Box-1 Box-1"
-    "Contact-Us Contact-Us"
     "footer footer";
     }
     .Work-Title{

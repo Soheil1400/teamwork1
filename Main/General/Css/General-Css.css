@@ -7,17 +7,21 @@
     font-family: "Encode Sans";
     src: url("../../../Element/Fonts/Encode Sans/c4mw1mF4GcnstG_Jh1QH6ac4hNLeNyeYUpKeDBNPVo0.woff2") format("woff2");
 }
-
+*{
+    margin: 0;
+    padding: 0;
+}
 :root {
     --yellow-primary-color: #fff226;
-    --grey-color: #CCCCCC;
     --yellow-secondary-color: #f2e400;
+    --yellow-tertiary-color: #b8ad00;
+    --grey-color: #CCCCCC;
     --gray-small: #F0F0F0;
     --verylarge-fontsize: 3rem;
     --large-fontsize: 2.3rem;
     --medium-fontsize: 2rem;
     --small-fontsize: 1.5rem;
     --verysmall-fontsize: 0.8rem;
-    --semismall-fontsize: 1rem;
+    --semismall-fontsize: 1 rem;
 }
 
