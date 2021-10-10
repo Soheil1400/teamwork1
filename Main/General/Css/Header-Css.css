@@ -1,7 +1,6 @@
 * {
     padding: 0;
 }
-
 .Header-Background {
     background-color: white;
     position: sticky;
@@ -57,6 +56,9 @@
     padding-top: 16px;
 }
 
+i{
+    cursor: pointer;
+}
 
 .Header-Home i {
     padding: 20px;

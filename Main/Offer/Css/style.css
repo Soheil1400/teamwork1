@@ -20,6 +20,8 @@
     font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
     width: 80%;
     margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-explain {
@@ -46,7 +48,7 @@ h3 {
 p {
     font-size: var(--verysmall-fontsize);
     line-height: 25px;
-    font-family:Helvetica, Arial, sans-serif;
+    font-family:"Lora", sans-serif;
     font-style: normal;
 }
 
