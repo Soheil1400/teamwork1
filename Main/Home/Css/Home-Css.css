@@ -211,14 +211,9 @@ button img{
 .DMS-Font h5{
    margin:40px 0;
 }
-/*Footer*/
-.footer{
-    width: 85%;
-}
-
 /*Tablet*/
 /*Tablet*/
-@media screen and (min-width: 750px) and (max-width: 1023px) {
+@media only screen and (min-width: 750px) and (max-width: 1000px) {
     .Home-Container {
         height: 150vh;
         grid-template: 0.1fr 0.9fr 0.5fr repeat(3, 0.2fr) / repeat(3, 0.33fr);
@@ -255,35 +250,38 @@ button img{
         grid-template-areas:
         "Design Motion Strategy";
     }
-    .footer{
+}
+
+/*Laptop*/
+/*Laptop*/
+
+@media only screen and (min-width: 1000px) {
+    .Home-Container {
+        height: 200vh;
+        grid-template: 0.1fr 1fr 0.5fr repeat(3, 0.2fr) / repeat(3, 0.33fr);
+        grid-template-areas:
+    "Home-Header Home-Header Home-Header"
+    "Top-Title Top-Title Top-Title"
+    "Box-1 Box-1 Box-1"
+    "Offer Offer Offer"
+    "Box-2 Box-2 Box-2 "
+    "footer footer footer";
+    }
+    .max {
+        max-width: 1060px;
+    }
+    .max-1{
+        max-width: 900px;
+    }
+    .Home-Title-Container{
         width: 85%;
     }
-}
-
-/*Laptop*/
-/*Laptop*/
-
-@media screen and (min-width: 1024px) and (max-width: 1439px){
-    .Home-Container {
-        height: 200vh;
-        grid-template: 0.1fr 1fr 0.5fr repeat(3, 0.2fr) / repeat(3, 0.33fr);
-        grid-template-areas:
-    "Home-Header Home-Header Home-Header"
-    "Top-Title Top-Title Top-Title"
-    "Box-1 Box-1 Box-1"
-    "Offer Offer Offer"
-    "Box-2 Box-2 Box-2 "
-    "footer footer footer";
-    }
-    .Home-Title-Container{
-        width: 90%;
-    }
     .Home-Title-Container h1{
         width: 60%;
     }
 
     .Box-1{
-        width: 90%;
+        width: 85%;
         grid-gap: 20px;
         margin-top: -120px;
         grid-template: repeat(2 , auto) / repeat(3,auto);
@@ -291,98 +289,13 @@ button img{
          "Pic-1 Pic-2 Pic-3" "Pic-4 Pic-5 Pic-6";
     }
     .Offer{
-        width: 90%;
+        width: 85%;
     }
     .Box-2{
-        width: 90%;
+        width: 85%;
         grid-gap: 100px;
         grid-template: 1fr / repeat(3,auto);
         grid-template-areas:
         "Design Motion Strategy";
-    }
-    .footer{
-        width: 90%;
-    }
-}
-/*Laptop-2*/
-@media screen and (min-width: 1440px) and (max-width: 2560px){
-    .Home-Container {
-        height: 200vh;
-        grid-template: 0.1fr 1fr 0.5fr repeat(3, 0.2fr) / repeat(3, 0.33fr);
-        grid-template-areas:
-    "Home-Header Home-Header Home-Header"
-    "Top-Title Top-Title Top-Title"
-    "Box-1 Box-1 Box-1"
-    "Offer Offer Offer"
-    "Box-2 Box-2 Box-2 "
-    "footer footer footer";
-    }
-    .Home-Title-Container {
-        width: 70%;
-    }
-    .Home-Title-Container h1{
-        width: 60%;
-    }
-    .Box-1{
-        width: 70%;
-        grid-gap: 20px;
-        margin-top: -120px;
-        grid-template: repeat(2 , auto) / repeat(3,auto);
-        grid-template-areas:
-         "Pic-1 Pic-2 Pic-3" "Pic-4 Pic-5 Pic-6";
-    }
-    .Offer{
-        width: 70%;
-    }
-    .Offer h2{
-        width: 70%;
-    }
-    .Box-2{
-        width: 70%;
-        grid-gap: 100px;
-        grid-template: 1fr / repeat(3,auto);
-        grid-template-areas:
-        "Design Motion Strategy";
-    }
-    .footer{
-        width: 70%;
-    }
-}
-/*4k*/
-@media screen and (min-width: 2560px){
-    .Home-Container {
-        height: 200vh;
-        grid-template: 0.1fr 1fr 0.5fr repeat(3, 0.2fr) / repeat(3, 0.33fr);
-        grid-template-areas:
-    "Home-Header Home-Header Home-Header"
-    "Top-Title Top-Title Top-Title"
-    "Box-1 Box-1 Box-1"
-    "Offer Offer Offer"
-    "Box-2 Box-2 Box-2 "
-    "footer footer footer";
-    }
-    .Home-Title-Container{
-        width: 40%;
-    }
-    .Box-1{
-        width: 40%;
-        grid-gap: 20px;
-        margin-top: -120px;
-        grid-template: repeat(2 , auto) / repeat(3,auto);
-        grid-template-areas:
-         "Pic-1 Pic-2 Pic-3" "Pic-4 Pic-5 Pic-6";
-    }
-    .Offer{
-        width: 40%;
-    }
-    .Box-2{
-        width: 40%;
-        grid-gap: 100px;
-        grid-template: 1fr / repeat(3,auto);
-        grid-template-areas:
-        "Design Motion Strategy";
-    }
-    .footer{
-        width: 40%;
     }
 }
