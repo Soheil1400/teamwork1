@@ -10,9 +10,11 @@
 .main-offer {
     height: 300vh;
     display: grid;
-    grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr 1.5fr;
+    grid-template-rows: 0.25fr 1fr 1.5fr 1.5fr 1.5fr 1.5fr;
     grid-gap: 10px;
-    grid-template-areas: 'header '
+    grid-template-areas:
+                        'header1'
+                        'header '
                          'content--design'
                          'content--motion'
                          'content--strategy'
@@ -23,9 +25,13 @@
     justify-items: center;
     align-items: center;
 }
-
+.Header-Background{
+    grid-area: header1;
+    width: 100%;
+}
 .header-explain {
     grid-area: header;
+    width: 100%;
     margin: 5%;
 }
 
