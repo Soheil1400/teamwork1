@@ -18,8 +18,9 @@ html {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 7fr repeat(2, 10fr) 4fr 4.5fr;
+    grid-template-rows: 0.5fr 7fr repeat(2, 10fr) 4fr 4.5fr;
     grid-template-areas:
+    "Header-Background"
             "home--title"
             "box--img1"
             "box--img2"
@@ -28,6 +29,10 @@ html {
             "footer";
     align-items: center;
     justify-items: center;
+}
+
+.Header-Background{
+    grid-area: Header-Background;
 }
 
 .home--title {
@@ -230,8 +235,9 @@ html {
         height: 300vh;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 8fr repeat(2, 4fr) 2fr 2fr 2fr;
+        grid-template-rows: 1fr 8fr repeat(2, 4fr) 2fr 2fr 2fr;
         grid-template-areas:
+        "Header-Background Header-Background Header-Background"
             "home--title home--title home--title"
             "box--img1 box--img1 box--img1"
             "box--img2 box--img2 box--img2"
