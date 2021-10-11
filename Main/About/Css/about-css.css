@@ -65,11 +65,11 @@ html {
     flex-direction: column;
 }
 
-.story--title {
+.about__story--title {
     margin: 3rem 0;
 }
 
-.story--title h2 {
+.about__story--title h2 {
     font-size: 1rem;
     font-family: "Encode Sans", sans-serif;
     color: var(--grey-color);
@@ -79,17 +79,17 @@ html {
     font-family: Lora, sans-serif;
 }
 
-.about--number {
+.about__number {
     font-family: Lora, sans-serif;
     margin: 3rem 0;
 }
 
-.number {
+.about__number--style {
     display: flex;
     flex-direction: column;
 }
 
-.about--number img {
+.about__number img {
     width: 63px;
     height: 63px;
     margin: 1rem 0;
@@ -133,35 +133,35 @@ html {
         font-size: var(--medium-fontsize);
     }
 
-    .story--title h2 {
+    .about__story--title h2 {
         font-size: var(--medium-fontsize);
     }
 
-    .fix {
+    .about__story--fixStyle {
         display: flex;
         flex-direction: row;
     }
 
-    .story--dec {
+    .about__story__style {
         width: 50%;
         margin: 0;
     }
 
-    .story--dec_style {
+    .about__story--dec {
         width: 85%;
     }
 
-    .about--number {
+    .about__number {
         width: 50%;
         margin: 0;
     }
 
-    .number {
+    .about__number--style {
         flex-direction: row;
         margin-bottom: 1rem;
     }
 
-    .number img {
+    .about__number--style img {
         margin: 0 1rem 1rem 1rem;
     }
 
@@ -192,35 +192,35 @@ html {
         font-size: var(--small-fontsize);
     }
 
-    .story--title h2 {
+    .about__story--title h2 {
         font-size: var(--small-fontsize);
     }
 
-    .fix {
+    .about__story--fixStyle {
         display: flex;
         flex-direction: row;
     }
 
-    .story--dec {
+    .about__story__style {
         width: 50%;
         margin: 0;
     }
 
-    .story--dec_style {
+    .about__story--dec {
         width: 85%;
     }
 
-    .about--number {
+    .about__number {
         width: 50%;
         margin: 0;
     }
 
-    .number {
+    .about__number--style {
         flex-direction: row;
         margin-bottom: 1rem;
     }
 
-    .number img {
+    .about__number--style img {
         margin: 0 1rem 1rem 1rem;
     }
 

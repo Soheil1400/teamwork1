@@ -18,7 +18,7 @@
                          'content--strategy'
                          'footer';
     font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
-    width: 80%;
+    width: 85%;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -43,13 +43,14 @@ h3 {
     font-size: var(--small-fontsize);
     line-height: 24px;
     color: var(--grey-color);
+    margin-top: 3%;
 }
 
 p {
     font-size: var(--verysmall-fontsize);
     line-height: 25px;
-    font-family:"Lora", sans-serif;
-    font-style: normal;
+    margin-top: 3%;
+    font-family: Helvetica,sans-serif;
 }
 
 .content--design {
@@ -170,7 +171,7 @@ p {
     }
 
     .properti--design {
-        width: 35rem;
+        width: 42rem;
         box-sizing: border-box;
         margin-left: 15%;
     }
@@ -181,7 +182,7 @@ p {
     }
 
     .properti--motion {
-        width: 35rem;
+        width: 42rem;
         box-sizing: border-box;
         margin-left: 15%;
     }
@@ -192,7 +193,7 @@ p {
     }
 
     .properti--strategy {
-        width: 35rem;
+        width: 42rem;
         box-sizing: border-box;
         margin-left: 15%;
     }
