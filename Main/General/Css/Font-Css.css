@@ -48,46 +48,8 @@ h5{
 .DMS-Font {
     font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
 }
-/*h1{*/
-/*    font-size: 45px;*/
-/*    line-height: 53px;*/
-/*    letter-spacing: 0;*/
-/*    font-weight: 900;*/
-/*    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;*/
-/*}*/
-/*h2{*/
-/*    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;*/
-/*    letter-spacing: 0;*/
-/*    font-size: 27px;*/
-/*    line-height: 33px;*/
-/*    font-weight: 900;*/
-/*    !*color: #161922;*!*/
-/*}*/
-/*h3{*/
-/*    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;*/
-/*    letter-spacing: 0;*/
-/*    font-size: 17px;*/
-/*    line-height: 24px;*/
-/*    font-weight: 700;*/
-/*}*/
-/*h4{*/
-/*    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;*/
-/*    letter-spacing: 0;*/
-/*    !*color: var(--grey-color);*!*/
-/*    font-size: 14px;*/
-/*    line-height: 19px;*/
-/*    font-weight: 700;*/
-/*}*/
-/*h5{*/
-/*    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;*/
-/*    font-size: 13px;*/
-/*    font-weight: lighter;*/
-/*}*/
-/*.DMS-Font {*/
-/*    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;*/
-/*}*/
 /*Tablet*/
-@media screen and (min-width: 750px) and (max-width: 1000px) {
+@media only screen and (min-width: 750px) and (max-width: 1000px) {
     h1 {
         font-size: 51px;
         line-height: 60px;
@@ -106,7 +68,7 @@ h5{
     }
 }
 /*Laptop 1024 ++*/
-@media screen and (min-width: 1024px){
+@media only screen and (min-width: 1000px) {
     h1 {
         font-size: 60px;
         line-height: 70px;

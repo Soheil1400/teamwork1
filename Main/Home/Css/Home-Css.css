@@ -1,8 +1,11 @@
+/*General*/
 @import "../../General/Css/footer.css";
 @import "../../General/Css/General-Css.css";
 @import "../../General/Css/Header-Css.css";
 @import "../../General/Css/Font-Css.css";
-
+body{
+    font-size: 13px;
+}
 .Home-Container{
     width: 100%;
     height: 300vh;
@@ -25,7 +28,7 @@
     grid-area: Top-Title;
     background-color: var(--yellow-primary-color);
     width:100%;
-    padding: 125px 0 300px 0;
+    padding: 125px 0 225px 0;
     display: flex;
     justify-content: center;
 }
@@ -40,15 +43,18 @@
     color: var(--yellow-tertiary-color);
 }
 /*Header-Button*/
-.Btn-Class{
+button{
     border: none;
     background-color: white;
-    border-radius: 5px;
-    font-size: 13px;
-    padding: 10px 20px;
+    font-size: 110%;
+    padding: 15px 40px;
     cursor: pointer;
-    transition: color .1s ease-in-out, background-color .1s ease-in-out, border-color .1s ease-in-out;
 }
+button img{
+    width: 12px;
+    margin-left: 1rem;
+}
+
 /*Pictures*/
 .Box-1{
     display: grid;
@@ -60,7 +66,7 @@
     "Pic-1" "Pic-2" "Pic-3" "Pic-4" "Pic-5" "Pic-6";
     align-items: center;
     justify-items: center;
-    margin-top: -80px;
+    margin-top: -120px;
 }
 .Box-1 a{
     position: relative
@@ -94,7 +100,7 @@
 .Picture-5-Home{
     grid-area: Pic-5;
 }
-.Picture-6-Container {
+.Picture-6-Home {
     grid-area: Pic-6;
 }
 /*Picture-BackGrounds*/
@@ -138,7 +144,7 @@
 /*Picture-Text*/
 .Picture-text{
     color: white;
-    font-size: 35px;
+    font-size: 150%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -205,10 +211,9 @@
 .DMS-Font h5{
    margin:40px 0;
 }
-
 /*Tablet*/
 /*Tablet*/
-@media screen and (min-width: 750px) and (max-width: 1000px) {
+@media only screen and (min-width: 750px) and (max-width: 1000px) {
     .Home-Container {
         height: 150vh;
         grid-template: 0.1fr 0.9fr 0.5fr repeat(3, 0.2fr) / repeat(3, 0.33fr);
@@ -231,13 +236,6 @@
          "Pic-1 Pic-2 Pic-3" "Pic-4 Pic-5 Pic-6";
         margin-top: -100px;
     }
-    .Box-2{
-        width: 85%;
-        grid-template: 1fr / repeat(3,auto);
-        grid-gap: 40px;
-        grid-template-areas:
-        "Design Motion Strategy";
-    }
     .Offer{
         width: 85%;
         padding: 125px 0;
@@ -245,17 +243,19 @@
     .Offer h2{
         width: 70%;
     }
-    .Offer h3{
-    }
-    .Contact-Us{
+    .Box-2{
         width: 85%;
+        grid-template: 1fr / repeat(3,auto);
+        grid-gap: 40px;
+        grid-template-areas:
+        "Design Motion Strategy";
     }
 }
 
 /*Laptop*/
 /*Laptop*/
 
-@media screen and (min-width: 1024px){
+@media only screen and (min-width: 1000px) {
     .Home-Container {
         height: 200vh;
         grid-template: 0.1fr 1fr 0.5fr repeat(3, 0.2fr) / repeat(3, 0.33fr);
@@ -267,38 +267,35 @@
     "Box-2 Box-2 Box-2 "
     "footer footer footer";
     }
+    .max {
+        max-width: 1060px;
+    }
+    .max-1{
+        max-width: 900px;
+    }
+    .Home-Title-Container{
+        width: 85%;
+    }
+    .Home-Title-Container h1{
+        width: 60%;
+    }
+
     .Box-1{
-        width: 90%;
+        width: 85%;
         grid-gap: 20px;
         margin-top: -120px;
         grid-template: repeat(2 , auto) / repeat(3,auto);
         grid-template-areas:
          "Pic-1 Pic-2 Pic-3" "Pic-4 Pic-5 Pic-6";
     }
+    .Offer{
+        width: 85%;
+    }
     .Box-2{
-        width: 90%;
+        width: 85%;
         grid-gap: 100px;
         grid-template: 1fr / repeat(3,auto);
         grid-template-areas:
         "Design Motion Strategy";
-    }
-
-    .Home-Title-Container{
-        width: 90%;
-    }
-    .Home-Title-Container h1{
-        width: 40%;
-    }
-    .Offer{
-        width: 90%;
-    }
-    .Offer h2{
-        width: 50%;
-    }
-    .Offer h5{
-        line-height: 100px;
-    }
-    .Contact-Us{
-        width: 90%;
     }
 }
