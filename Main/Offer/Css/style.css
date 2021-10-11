@@ -8,11 +8,13 @@
 }
 
 .main-offer {
-    height: 100vh;
+    height: 300vh;
     display: grid;
-    grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr;
+    grid-template-rows: 0.25fr 1fr 1.5fr 1.5fr 1.5fr 1.5fr;
     grid-gap: 10px;
-    grid-template-areas: 'header '
+    grid-template-areas:
+                         'header-background'
+                         'header '
                          'content--design'
                          'content--motion'
                          'content--strategy'
@@ -20,12 +22,16 @@
     font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
     width: 85%;
     margin: auto;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
 }
-
+.Header-Background{
+    grid-area: header-background;
+    width: 100%;
+}
 .header-explain {
     grid-area: header;
+    width: 100%;
     margin: 5%;
 }
 
@@ -57,9 +63,11 @@ p {
     grid-area: content--design;
     width: 95%;
     margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.image--design {
+.image-fixed img {
 
 }
 
@@ -72,10 +80,8 @@ p {
     grid-area: content--motion;
     width: 95%;
     margin: 3rem auto;
-}
-
-.image--motion {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .properti--motion {
@@ -87,11 +93,10 @@ p {
     grid-area: content--strategy;
     width: 95%;
     margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.image--strategy {
-
-}
 
 .properti--strategy {
     width: 90%;
@@ -168,6 +173,7 @@ p {
 
     .content--design {
         display: flex;
+        flex-direction: row;
     }
 
     .properti--design {
@@ -179,6 +185,7 @@ p {
 
     .content--motion {
         display: flex;
+        flex-direction: row;
     }
 
     .properti--motion {
@@ -190,6 +197,7 @@ p {
 
     .content--strategy {
         display: flex;
+        flex-direction: row;
     }
 
     .properti--strategy {
