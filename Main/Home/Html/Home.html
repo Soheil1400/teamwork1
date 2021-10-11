@@ -7,11 +7,14 @@
     <title>Home-Page</title>
     <link href="../Css/Home-Css.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <script src="../Js/Header.js"></script>
 <div class="Home-Container">
-    <div class="Header-Background">
+    <div class="Header-Background" id="header">
         <div class="Header-Home">
             <div class="Header-Home-Logo">
                 <a href="Home.html">
@@ -19,7 +22,7 @@
                 </a>
                 <i class="material-icons" onclick="showMenu()">reorder</i>
             </div>
-            <nav id="navList" >
+            <nav id="navList">
                 <ul>
                     <li>
                         <a href="Home.html"><span style="color: var(--grey-color)">Home</span></a>
@@ -106,7 +109,7 @@
                 </div>
             </div>
         </a>
-        <a href="../../Work/Html/Work.html" class="Picture-6-Home" >
+        <a href="../../Work/Html/Work.html" class="Picture-6-Home">
             <div class="Picture-Container">
                 <div class="Picture-Special">
                     <img src="../Img/simple2-home-portfolio-project-6a.jpg" alt="Pic-6">
@@ -118,26 +121,30 @@
         </a>
     </div>
     <div class="Offer">
-        <h2>Enim ad mllo inventore veritatis et qgni am eius modi tempora incid volupt <a href="../../Offer/Html/Offer.html" class="Offer-Link">our offer</a></h2>
+        <h2>Enim ad mllo inventore veritatis et qgni am eius modi tempora incid volupt <a
+                href="../../Offer/Html/Offer.html" class="Offer-Link">our offer</a></h2>
         <h4>This is what we can do</h4>
     </div>
     <div class="Box-2">
         <div class="Design DMS-Font">
             <h3 class>Design</h3>
-            <h5>Vivamus in diam turpis. In condimentum maximus tristique. Maecenas non laoreet odio. Fusce lobortis porttitor purus, vel vestibulum libero pharetra vel.</h5>
+            <h5>Vivamus in diam turpis. In condimentum maximus tristique. Maecenas non laoreet odio. Fusce lobortis
+                porttitor purus, vel vestibulum libero pharetra vel.</h5>
         </div>
         <div class="Motion DMS-Font">
             <h3 class>Motion</h3>
-            <h5>Vivamus in diam turpis. In condimentum maximus tristique. Maecenas non laoreet odio. Fusce lobortis porttitor purus, vel vestibulum libero pharetra vel.</h5>
+            <h5>Vivamus in diam turpis. In condimentum maximus tristique. Maecenas non laoreet odio. Fusce lobortis
+                porttitor purus, vel vestibulum libero pharetra vel.</h5>
         </div>
         <div class="Strategy DMS-Font">
             <h3 class>Strategy</h3>
-            <h5>Vivamus in diam turpis. In condimentum maximus tristique. Maecenas non laoreet odio. Fusce lobortis porttitor purus, vel vestibulum libero pharetra vel.</h5>
+            <h5>Vivamus in diam turpis. In condimentum maximus tristique. Maecenas non laoreet odio. Fusce lobortis
+                porttitor purus, vel vestibulum libero pharetra vel.</h5>
         </div>
     </div>
     <div class="footer max">
-        <div class="footer1">
-            <div class="contactus--style">
+        <div class="footer__part1">
+            <div class="footer__part1--contactUs">
                 <h2>
                     Enim ad mllo invento incid<br>
                     <a href="../../Contact/Html/Contact.html">
@@ -146,11 +153,11 @@
                 </h2>
             </div>
         </div>
-        <div class="footer2">
-            <div class="small--logo">
+        <div class="footer__part2">
+            <div class="footer__part2--smallLogo">
                 <img src="../../Home/Img/Be.png" alt="Be">
             </div>
-            <div class="small--logoSub">
+            <div class="footer__part2--smallLogoSub">
                 <p>
                     Quis dolorum mollitia,
                 </p>
@@ -161,21 +168,21 @@
                     facilis impedit.
                 </p>
             </div>
-            <div class="footer--dec">
+            <div class="footer__part2--dec">
                 <p>
                     <b>Quos obcaecati voluptatem sunt</b> esse blanditiis voluptas voluptates aperiam aliquam culpa,
                     dignissimos eius quaerat.
                 </p>
             </div>
         </div>
-        <div class="footer3">
-            <div class="arrow--up">
+        <div class="footer__part3">
+            <div class="footer__part3--arrowUp">
                 <a href="#">
                     <img src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/000000/external-up-arrows-those-icons-lineal-those-icons.png"
                          alt="up">
                 </a>
             </div>
-            <div class="footer--end">
+            <div class="footer__part3--end">
                 <p>
                     © 2021 Betheme by <span class="color--Fyellow">Muffin group</span> | All Rights Reserved | Powered
                     by

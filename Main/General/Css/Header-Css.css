@@ -1,10 +1,9 @@
 * {
     padding: 0;
 }
+
 .Header-Background {
     background-color: white;
-    position: sticky;
-    top: 0;
     z-index: 999;
 }
 
@@ -56,7 +55,7 @@
     padding-top: 16px;
 }
 
-i{
+i {
     cursor: pointer;
 }
 
@@ -66,6 +65,18 @@ i{
 
 .Header-Home nav {
     display: none;
+    transition: height 1s;
+}
+
+.sticky {
+    position: fixed;
+    top: 0px;
+    transform: translate(0, -50px);
+}
+
+.inView {
+    transform: translate(0, 0);
+    transition: all .6s ;
 }
 
 @media only screen and (min-width: 750px) and (max-width: 999px) {
@@ -83,6 +94,11 @@ i{
 }
 
 @media only screen and (min-width: 1000px) {
+    .Header-Background {
+        background-color: white;
+        z-index: 999;
+    }
+
     .Header-Home {
         width: 85%;
         max-width: 1000px;
@@ -99,7 +115,7 @@ i{
     .Header-Home nav {
         width: auto;
         margin: 0;
-        display: block!important;
+        display: block !important;
     }
 
     .Header-Home li {
