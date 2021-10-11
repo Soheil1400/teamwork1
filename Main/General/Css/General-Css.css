@@ -11,6 +11,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --yellow-primary-color: #fff226;
     --yellow-secondary-color: #f2e400;
