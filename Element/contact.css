@@ -1,9 +1,16 @@
+@import "../Main/General/Css/footer.css";
+@import "../Main/General/Css/Header-Css.css";
+@import "../Main/General/Css/General-Css.css";
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+a:hover, /* OPTIONAL*/
+a:visited,
+a:focus
+{text-decoration: none !important;}
 
 .home__container {
     width: 100%;
