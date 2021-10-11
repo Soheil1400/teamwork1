@@ -3,9 +3,6 @@
 @import "../../General/Css/General-Css.css";
 @import "../../General/Css/Header-Css.css";
 @import "../../General/Css/Font-Css.css";
-body{
-    font-size: 13px;
-}
 .Home-Container{
     width: 100%;
     height: 300vh;

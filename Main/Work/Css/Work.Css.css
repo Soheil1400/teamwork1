@@ -140,12 +140,9 @@
 .Picture-Container:hover .Picture-Special{
     opacity: 0;
 }
-/*Footer*/
-.footer{
-    width:85%;
-}
+
 /*Tablet*/
-@media screen and (min-width: 750px) and (max-width: 1023px) {
+@media only screen and (min-width: 750px) and (max-width: 1000px)  {
     .Home-Container {
         height: 130vh;
         grid-template: 1fr 1.5fr 1.5fr 1fr / repeat(2, auto);
@@ -158,7 +155,7 @@
     .Work-Title{
         width: 85%;
     }
-    .Work-Container h2{
+    .Work-Title-Container h2{
         width: 70%;
     }
     .Box-1{
@@ -170,13 +167,10 @@
          "Pic-3 Pic-4"
          "Pic-5 Pic-6";
     }
-    .footer{
-        width: 85%;
-    }
 }
 
 /*Laptop*/
-@media screen and (min-width: 1024px) and (max-width: 1439px){
+@media only screen and (min-width: 1000px){
     .Home-Container {
         grid-template: 1fr 1.5fr 1.5fr 1fr / repeat(2, auto);
         grid-template-areas:
@@ -185,10 +179,13 @@
     "Box-1 Box-1"
     "footer footer";
     }
+    .max {
+        max-width: 1060px;
+    }
     .Work-Title{
         width: 90%;
     }
-    .Work-Container h2{
+    .Work-Title-Container h2{
         width: 47%;
     }
     .Box-1{
@@ -199,64 +196,6 @@
          "Pic-1 Pic-2"
          "Pic-3 Pic-4"
          "Pic-5 Pic-6";
-    }
-    .footer{
-        width: 90%;
-    }
-}
-/*Laptop-2*/
-@media screen and (min-width: 1440px) and (max-width: 2560px) {
-    .Home-Container {
-        grid-template: 0.1fr 0.5fr 1fr 0.2fr / repeat(2, auto);
-        grid-template-areas:
-    "Work-Header Work-Header"
-    "Top-Title Top-Title"
-    "Box-1 Box-1"
-    "footer footer";
-    }
-    .Work-Title {
-        width: 70%;
-    }
-    .Work-Container h2{
-        width: 39%;
-    }
-    .Box-1 {
-        width: 70%;
-        grid-gap: 40px;
-        grid-template: repeat(3, auto) / repeat(2, auto);
-        grid-template-areas:
-         "Pic-1 Pic-2"
-         "Pic-3 Pic-4"
-         "Pic-5 Pic-6";
-    }
-    .footer{
-        width: 70%;
-    }
-}
-/*4K*/
-@media screen and (min-width: 2560px){
-    .Home-Container {
-        grid-template: 0.1fr 0.5fr 1fr 0.2fr / repeat(2, auto);
-        grid-template-areas:
-    "Work-Header Work-Header"
-    "Top-Title Top-Title"
-    "Box-1 Box-1"
-    "footer footer";
-    }
-    .Work-Title{
-        width: 40%;
-    }
-    .Box-1{
-        width: 40%;
-        grid-gap: 20px;
-        grid-template: repeat(3 , auto) / repeat(2,auto);
-        grid-template-areas:
-         "Pic-1 Pic-2"
-         "Pic-3 Pic-4"
-         "Pic-5 Pic-6";
-    }
-    .footer{
-        width: 40%;
     }
 }
 
