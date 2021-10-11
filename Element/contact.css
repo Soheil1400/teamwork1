@@ -1,0 +1,315 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home__container {
+    width: 100%;
+    height: 200vh;
+    margin: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+            "header header"
+            "contact--title contact--title"
+            "address address"
+            "talk talk"
+            "contact--form contact--form"
+            "footer footer";
+    align-items: center;
+    justify-items: center;
+}
+
+.Header-Background {
+    grid-area: header;
+    width: 100%;
+}
+
+.talk {
+    margin-bottom: 30%;
+    display: grid;
+    grid-area: talk;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr;
+    grid-template-areas: "talk-image talk-description";
+    width: 85%;
+}
+
+.address {
+    margin-bottom: 20%;
+    display: grid;
+    grid-area: address;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr;
+    grid-template-areas: "address-image address-description";
+    width: 85%;
+}
+
+.contact--title {
+    margin-top: 4rem;
+    grid-area: contact--title;
+    background: #fff;
+    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 85%;
+}
+
+.title--dec {
+    color: #161922;
+    font-weight: 900;
+    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    line-height: 19px;
+}
+
+.title--style {
+    margin-bottom: 30%;
+    color: var(--grey-color);
+    font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+    line-height: 33px;
+    font-size: 21px;
+}
+
+.address--img {
+    grid-area: address-image;
+    top: 0;
+    transition: 0.5s;
+}
+
+.address--dec {
+    font-size: 12px;
+    font-weight: 19;
+    text-align: left;
+    grid-area: address-description;
+    align-content: flex-start;
+    justify-content: flex-start;
+    font-family: "Lucida Sans", Helvetica, sans-serif;
+}
+
+.address:hover .address--img {
+    transform: translateY(-5px);
+    top: 5px;
+}
+
+.address .address--dec:before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--grey-color);
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+
+.address:hover .address--dec:before {
+    width: 60%;
+}
+
+.talk:hover .talk--img {
+    transform: translateY(-5px);
+    top: 5px;
+}
+
+.talk .talk--dec:before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #a2a2a2;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+
+.talk:hover .talk--dec:before {
+    width: 60%;
+}
+
+.talk--img {
+    grid-area: talk-image;
+    width: 42px;
+    height: 63px;
+}
+
+.talk--dec {
+    font-size: 12px;
+    font-weight: 19;
+    text-align: left;
+    grid-area: talk-description;
+    font-family: "Lucida Sans", Helvetica, sans-serif;
+}
+
+button {
+    background-color: #cccccc;
+    margin-top: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    font-size: 1rem;
+}
+
+input[type="email"],
+input[type="text"] {
+    background-color: #fafafa;
+}
+
+.contact--form {
+    margin-top: 5px;
+    grid-area: contact--form;
+    width: 85%;
+}
+
+.form-group input {
+    width: 100%;
+    border: none;
+}
+
+.form-group textarea {
+    width: 100%;
+    border: none;
+}
+
+.responsive {
+    display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+    .home__container {
+        height: 150vh;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 0.5fr 1fr 1fr  3fr 3fr;
+        grid-template-areas:
+            "header header header"
+            "contact--title contact--title contact--title"
+            "null-address address talk"
+            "contact--form contact--form null"
+            "footer footer footer";
+    }
+
+    .max{
+        width: 1060px;
+    }
+
+    .contact--title {
+        font-family: "Encode Sans", sans-serif;
+        height: auto;
+        line-height: 10px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .title--style {
+        color: var(--grey-color);
+        font-family: "Encode Sans Expanded", Helvetica, Arial, sans-serif;
+        font-size: 45px;
+        font-weight: 900;
+        line-height: 55px;
+    }
+
+    .Header-Background {
+        grid-area: header;
+    }
+
+    .talk {
+        margin-top: -50%;
+        display: grid;
+        grid-area: talk;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: "talk-image talk-description";
+    }
+
+    .address {
+        margin-top: -50%;
+        display: grid;
+        grid-area: address;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "address-image address-description";
+    }
+
+    .address--img {
+        grid-area: address-image;
+        top: 0;
+        transition: 0.5s;
+    }
+
+    .address--dec {
+        grid-area: address-description;
+        font-size: 14px;
+        align-content: flex-end;
+        justify-content: flex-end;
+    }
+
+    .address:hover .address--img {
+        transform: translateY(-5px);
+        top: 5px;
+    }
+
+    .address .address--dec:before {
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: #a2a2a2;
+        display: block;
+        margin: auto;
+        transition: 1s;
+    }
+
+    .address:hover .address--dec:before {
+        width: 60%;
+    }
+
+    .talk:hover .talk--img {
+        transform: translateY(-5px);
+        top: 5px;
+    }
+
+    .talk .talk--dec:before {
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: #a2a2a2;
+        display: block;
+        margin: auto;
+        transition: 1s;
+    }
+
+    .talk:hover .talk--dec:before {
+        width: 60%;
+    }
+
+    .talk--img {
+        grid-area: talk-image;
+        width: 42px;
+        height: 63px;
+    }
+
+    .talk--dec {
+        font-size: 14px;
+        grid-area: talk-description;
+    }
+
+    .contact--form {
+        grid-area: contact--form;
+        width: 85%;
+    }
+
+    .main-form {
+        display: block;
+    }
+
+    .responsive {
+        /*display: block;*/
+    }
+}
